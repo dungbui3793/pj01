@@ -1,0 +1,472 @@
+@font-face {
+  font-family: "DIN Alternate";
+  src: url(../font/din-alternate-regular.otf);
+}
+@font-face {
+  font-family: "Frutiger Next LT CE";
+  src: url(../font/frutiger-next-lt-light.otf);
+}
+html, body{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background: #daddea;
+  overflow: hidden;
+  .nav-bar{
+    z-index: 10;
+    position: relative;
+    font-family: "Frutiger Next LT CE";
+    h1{
+      font-size: 24px;
+      padding-left: 20px;
+      display: inline-block;
+      margin: 20px 0 0;
+    }
+    .nav-right{
+      float: right;
+      margin: 26px 0 0 5px;
+      div{
+        display: inline-block;
+        font-size: 16px;
+        margin-right: 15px;
+        &.message::before{
+          content: url("../img/message.png");
+          vertical-align: middle;
+          padding-right: 5px;
+        }
+        &.access::before{
+          content: url("../img/access.png");
+          vertical-align: middle;
+          padding-right: 5px;
+        }
+      }
+    }
+  }
+
+  .content,.content-front{
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    margin-left: -1%;
+    display: table;
+    position: fixed;
+    top: 0;
+    .block-bg{
+      -ms-transform: rotate(352deg); /* IE 9 */
+      -webkit-transform: rotate(352deg); /* Chrome, Safari, Opera */
+      transform: rotate(352deg);
+      display: table-cell;
+      vertical-align: middle;
+      .text-bg{
+        font-family: "DIN Alternate";
+        font-size: 22vw;
+        font-weight: bold;
+        color: #ff0c00;
+        line-height: 22vw;
+        margin: 0;
+      }
+      .line{
+        width: 100%;
+        height: 2.6vw;
+        background: #ff0c00;
+        margin-top: -1.5%;
+        margin-left: -2%;
+        text-align: center;
+        p{
+          margin: 0 0 0 12vw;
+          font-size: 2vw;
+          color: #FFF;
+          font-family: "Frutiger Next LT CE";
+          font-weight: lighter;
+          line-height: 2.6vw;
+          text-shadow: 2px 2px 5px red;
+          span{
+            font-size: 1.5vw;
+          }
+        }
+      }
+      .underline{
+        width: 100%;
+        height: 0.4vw;
+        margin-top: 0.3%;
+        margin-left: -2%;
+        background: #ff0c00;
+      }
+    }
+    .man{
+      position: absolute;
+      top: 40px;
+      left: 0;
+      width: 100vw;
+      height: 100%;
+      margin-left: 1%;
+      text-align: center;
+      img{
+        width: 50%;
+      }
+      .man-sp{
+        display: none;
+      }
+    }
+
+  }
+
+  .content-front{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    .text-bg{
+      opacity: 0.1;
+    }
+    .block-bg .line{
+      background: rgba(255, 12, 0, 0.1);
+    }
+    .block-bg .underline{
+      background: rgba(255, 12, 0, 0.1);
+    }
+  }
+  .list-hover{
+    position: absolute;
+    width: 100vw;
+    bottom: 50px;
+    text-align: center;
+    .button-hover{
+      z-index: 11;
+      height: 11vw;
+      width: 11vw;
+      margin: 0 1vw;
+      display: inline-block;
+      position: relative;
+      .image-list{
+        height: 100%;
+        width: 100%;
+        &.link-world{
+          background: url("../img/link_world_pic.png") no-repeat center center;
+          background-size: 100%;
+        }
+        &.hear-me{
+          background: url("../img/hear_me_pic.png") no-repeat center center;
+          background-size: 100%;
+        }
+        &.AR-phabet{
+          background: url("../img/AR_phabet_pic.png") no-repeat center center;
+          background-size: 100%;
+        }
+        &.interactive{
+          background: url("../img/interactive_actual_movie_pic.png") no-repeat center center;
+          background-size: 100%;
+        }
+        &.sumaho{
+          background: url("../img/sumaho_pic.png") no-repeat center center;
+          background-size: 100%;
+        }
+      }
+      .text-list {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        &.link-world {
+          background: url("../img/link_world_text.png") no-repeat center center;
+          background-size: 100%;
+        }
+        &.hear-me{
+          background: url("../img/hear_me_text.png") no-repeat center center;
+          background-size: 100%;
+        }
+        &.AR-phabet{
+          background: url("../img/AR_phabet_text.png") no-repeat center center;
+          background-size: 100%;
+        }
+        &.interactive{
+          background: url("../img/interactive_actual_movie_text.png") no-repeat center center;
+          background-size: 100%;
+        }
+        &.sumaho{
+          background: url("../img/sumaho_text.png") no-repeat center center;
+          background-size: 100%;
+        }
+      }
+      &:hover{
+        .text-btn{
+          position: absolute;
+          top: 0;
+          height: 100%;
+          width: 100%;
+          &.link-world{
+            background: url("../img/link_world.png") no-repeat center center;
+            background-size: 100%;
+          }
+          &.hear-me{
+            background: url("../img/hear_me.png") no-repeat center center;
+            background-size: 100%;
+          }
+          &.AR-phabet{
+            background: url("../img/AR_phabet.png") no-repeat center center;
+            background-size: 100%;
+          }
+          &.interactive{
+            background: url("../img/interactive.png") no-repeat center center;
+            background-size: 100%;
+          }
+          &.sumaho{
+            background: url("../img/sumaho.png") no-repeat center center;
+            background-size: 100%;
+          }
+        }
+        .text-list{
+          animation: 5s spinnow infinite linear;
+          -moz-animation: 5s spinnow infinite linear;
+          -webkit-animation: 5s spinnow infinite linear;
+          -ms-animation: 5s spinnow infinite linear;
+          &.link-world{
+            background: url("../img/link_world_hover.png") no-repeat center center;
+            background-size: 100%;
+          }
+          &.hear-me{
+            background: url("../img/hear_me_hover.png") no-repeat center center;
+            background-size: 100%;
+          }
+          &.AR-phabet{
+            background: url("../img/AR_phabet_hover.png") no-repeat center center;
+            background-size: 100%;
+          }
+          &.interactive{
+            background: url("../img/interactive_actual_movie_hover.png") no-repeat center center;
+            background-size: 100%;
+          }
+          &.sumaho{
+            background: url("../img/sumaho_hover.png") no-repeat center center;
+            background-size: 100%;
+          }
+        }
+        .image-list{
+          &.link-world{
+            background: url("../img/link_world_pic_hover.png") no-repeat center center;
+            background-size: 100%;
+          }
+          &.hear-me{
+            background: url("../img/hear_me_pic_hover.png") no-repeat center center;
+            background-size: 100%;
+          }
+          &.interactive{
+            background: url("../img/interactive_actual_movie_pic_hover.png") no-repeat center center;
+            background-size: 100%;
+          }
+          &.sumaho{
+            background: url("../img/sumaho_pic_hover.png") no-repeat center center;
+            background-size: 100%;
+          }
+        }
+      }
+      @-webkit-keyframes spinnow {
+        100% {
+          transform: rotate(360deg);
+          -webkit-transform: rotate(360deg);
+        }
+      }
+      @-moz-keyframes spinnow {
+        100% {
+          transform: rotate(360deg);
+          -moz-transform: rotate(360deg);
+        }
+      }
+      @-ms-keyframes spinnow {
+        100% {
+          transform: rotate(360deg);
+          -ms-transform: rotate(360deg);
+        }
+      }
+    }
+  }
+  #carousel_item{
+    display: none;
+  }
+  .carousel-inner .active.left  { left: -33%;             }
+  .carousel-inner .active.right { left: 33%;              }
+  .carousel-inner .next         { left: 33%               }
+  .carousel-inner .prev         { left: -33%              }
+  .carousel-control.left        { background-image: none; }
+  .carousel-control.right       { background-image: none; }
+}
+@media screen and (min-width: 1200px) {
+  html, body{
+    .content .man img{
+      width: 45%;
+    }
+    .list-hover {
+      .button-hover {
+        height: 10vw;
+        width: 10vw;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1640px) {
+  html, body{
+    .content .man img{
+      width: 30%
+    }
+    .list-hover {
+      .button-hover {
+        height: 8vw;
+        width: 8vw;
+      }
+    }
+  }
+}
+@media screen and (max-width: 950px) {
+  html, body{
+    .content .man img{
+      width: 60%;
+    }
+    .list-hover {
+      .button-hover {
+        height: 12vw;
+        width: 12vw;
+
+      }
+    }
+  }
+}
+@media screen and (max-width: 800px) {
+  html, body{
+    .nav-bar h1{
+      font-size: 5vw;
+      text-align: center;
+      width: 100%;
+      padding: 0;
+    }
+    .nav-right{
+      display: none;
+    }
+    .content .man {
+      top: 70px;
+      margin-left: 3%;
+      .man-sp{
+        display: inline-block;
+        width: 85%;
+      }
+      .man-pc{
+        display: none;
+      }
+    }
+    .content,.content-front{
+      margin-left: -3%;
+      .block-bg{
+        .text-bg{
+          line-height: 35vw;
+          font-size: 45vw;
+          width: 115vw;
+          white-space: pre-wrap;      /* CSS3 */
+          white-space: -moz-pre-wrap; /* Firefox */
+          white-space: -pre-wrap;     /* Opera <7 */
+          white-space: -o-pre-wrap;   /* Opera 7 */
+          word-wrap: break-word;      /* IE */
+          span{
+            letter-spacing: 1.5vw;
+          }
+        }
+        .underline{
+          height: 0.5vw;
+          margin-top: 0.5%;
+          margin-left: -5%;
+        }
+        .line{
+          height: 15vw;
+          margin-left: -5%;
+          margin-top: 1%;
+          p{
+            font-size: 9vw;
+            width: 84vw;
+            line-height: 4.4vw;
+            height: 11vw;
+            margin: 0 auto;
+            padding-top: 2.7vw;
+            text-align: center;
+            span{
+              font-size: 6vw;
+            }
+            .break-line{
+              font-size: 5.5vw;
+              span{
+                font-size: 4.5vw;
+              }
+            }
+          }
+        }
+      }
+    }
+    .content-front{
+      -moz-box-shadow: inset 0 -50vw 30vw -30vw rgba(0,0,0,0.6);
+      -webkit-box-shadow: inset 0 -50vw 30vw -30vw rgba(0,0,0,0.6);
+      box-shadow: inset 0 -50vw 30vw -30vw rgba(0,0,0,0.6);
+
+      .text-bg{
+        opacity: 0.2;
+      }
+      .block-bg .line{
+        background: rgba(255, 12, 0, 0.2);
+      }
+      .block-bg .underline{
+        background: rgba(255, 12, 0, 0.2);
+      }
+    }
+    #carousel_item{
+      display: inline-block;
+      z-index: 12;
+      position: absolute;
+      bottom: 2vh;
+    }
+    .btn-sp{
+      width: 30vw;
+      height: 30vw;
+      .link-world{
+        width: 100%;
+        height: 100%;
+        background: url("../img/link_world_pic.png") no-repeat center center;
+        background-size: 100%;
+      }
+      .hear-me{
+        width: 100%;
+        height: 100%;
+        background: url("../img/hear_me_pic.png") no-repeat center center;
+        background-size: 100%;
+      }
+      .AR-phabet{
+        width: 100%;
+        height: 100%;
+        background: url("../img/AR_phabet_pic.png") no-repeat center center;
+        background-size: 100%;
+      }
+      .interactive{
+        width: 100%;
+        height: 100%;
+        background: url("../img/interactive_actual_movie_pic.png") no-repeat center center;
+        background-size: 100%;
+      }
+      .sumaho{
+        width: 100%;
+        height: 100%;
+        background: url("../img/sumaho_pic.png") no-repeat center center;
+        background-size: 100%;
+      }
+    }
+    .list-hover{
+      display: none;
+    }
+    .item{
+      -webkit-transition: none;
+      transition: none;
+      .col-xs-4:first-child,.col-xs-4:last-child{
+        .image-list{
+          width: 50%;
+          height: 50%;
+          margin: 7vw auto;
+        }
+      }
+    }
+  }
+}

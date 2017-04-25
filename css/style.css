@@ -1,0 +1,363 @@
+@font-face {
+  font-family: "DIN Alternate";
+  src: url(../font/din-alternate-regular.otf); }
+@font-face {
+  font-family: "Frutiger Next LT CE";
+  src: url(../font/frutiger-next-lt-light.otf); }
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background: #daddea;
+  overflow: hidden; }
+  html .nav-bar, body .nav-bar {
+    z-index: 10;
+    position: relative;
+    font-family: "Frutiger Next LT CE"; }
+    html .nav-bar h1, body .nav-bar h1 {
+      font-size: 24px;
+      padding-left: 20px;
+      display: inline-block;
+      margin: 20px 0 0; }
+    html .nav-bar .nav-right, body .nav-bar .nav-right {
+      float: right;
+      margin: 26px 0 0 5px; }
+      html .nav-bar .nav-right div, body .nav-bar .nav-right div {
+        display: inline-block;
+        font-size: 16px;
+        margin-right: 15px; }
+        html .nav-bar .nav-right div.message::before, body .nav-bar .nav-right div.message::before {
+          content: url("../img/message.png");
+          vertical-align: middle;
+          padding-right: 5px; }
+        html .nav-bar .nav-right div.access::before, body .nav-bar .nav-right div.access::before {
+          content: url("../img/access.png");
+          vertical-align: middle;
+          padding-right: 5px; }
+  html .content, html .content-front, body .content, body .content-front {
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    margin-left: -1%;
+    display: table;
+    position: fixed;
+    top: 0; }
+    html .content .block-bg, html .content-front .block-bg, body .content .block-bg, body .content-front .block-bg {
+      -ms-transform: rotate(352deg);
+      /* IE 9 */
+      -webkit-transform: rotate(352deg);
+      /* Chrome, Safari, Opera */
+      transform: rotate(352deg);
+      display: table-cell;
+      vertical-align: middle; }
+      html .content .block-bg .text-bg, html .content-front .block-bg .text-bg, body .content .block-bg .text-bg, body .content-front .block-bg .text-bg {
+        font-family: "DIN Alternate";
+        font-size: 22vw;
+        font-weight: bold;
+        color: #ff0c00;
+        line-height: 22vw;
+        margin: 0; }
+      html .content .block-bg .line, html .content-front .block-bg .line, body .content .block-bg .line, body .content-front .block-bg .line {
+        width: 100%;
+        height: 2.6vw;
+        background: #ff0c00;
+        margin-top: -1.5%;
+        margin-left: -2%;
+        text-align: center; }
+        html .content .block-bg .line p, html .content-front .block-bg .line p, body .content .block-bg .line p, body .content-front .block-bg .line p {
+          margin: 0 0 0 12vw;
+          font-size: 2vw;
+          color: #FFF;
+          font-family: "Frutiger Next LT CE";
+          font-weight: lighter;
+          line-height: 2.6vw;
+          text-shadow: 2px 2px 5px red; }
+          html .content .block-bg .line p span, html .content-front .block-bg .line p span, body .content .block-bg .line p span, body .content-front .block-bg .line p span {
+            font-size: 1.5vw; }
+      html .content .block-bg .underline, html .content-front .block-bg .underline, body .content .block-bg .underline, body .content-front .block-bg .underline {
+        width: 100%;
+        height: 0.4vw;
+        margin-top: 0.3%;
+        margin-left: -2%;
+        background: #ff0c00; }
+    html .content .man, html .content-front .man, body .content .man, body .content-front .man {
+      position: absolute;
+      top: 40px;
+      left: 0;
+      width: 100vw;
+      height: 100%;
+      margin-left: 1%;
+      text-align: center; }
+      html .content .man img, html .content-front .man img, body .content .man img, body .content-front .man img {
+        width: 50%; }
+      html .content .man .man-sp, html .content-front .man .man-sp, body .content .man .man-sp, body .content-front .man .man-sp {
+        display: none; }
+  html .content-front, body .content-front {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0; }
+    html .content-front .text-bg, body .content-front .text-bg {
+      opacity: 0.1; }
+    html .content-front .block-bg .line, body .content-front .block-bg .line {
+      background: rgba(255, 12, 0, 0.1); }
+    html .content-front .block-bg .underline, body .content-front .block-bg .underline {
+      background: rgba(255, 12, 0, 0.1); }
+  html .list-hover, body .list-hover {
+    position: absolute;
+    width: 100vw;
+    bottom: 50px;
+    text-align: center; }
+    html .list-hover .button-hover, body .list-hover .button-hover {
+      z-index: 11;
+      height: 11vw;
+      width: 11vw;
+      margin: 0 1vw;
+      display: inline-block;
+      position: relative; }
+      html .list-hover .button-hover .image-list, body .list-hover .button-hover .image-list {
+        height: 100%;
+        width: 100%; }
+        html .list-hover .button-hover .image-list.link-world, body .list-hover .button-hover .image-list.link-world {
+          background: url("../img/link_world_pic.png") no-repeat center center;
+          background-size: 100%; }
+        html .list-hover .button-hover .image-list.hear-me, body .list-hover .button-hover .image-list.hear-me {
+          background: url("../img/hear_me_pic.png") no-repeat center center;
+          background-size: 100%; }
+        html .list-hover .button-hover .image-list.AR-phabet, body .list-hover .button-hover .image-list.AR-phabet {
+          background: url("../img/AR_phabet_pic.png") no-repeat center center;
+          background-size: 100%; }
+        html .list-hover .button-hover .image-list.interactive, body .list-hover .button-hover .image-list.interactive {
+          background: url("../img/interactive_actual_movie_pic.png") no-repeat center center;
+          background-size: 100%; }
+        html .list-hover .button-hover .image-list.sumaho, body .list-hover .button-hover .image-list.sumaho {
+          background: url("../img/sumaho_pic.png") no-repeat center center;
+          background-size: 100%; }
+      html .list-hover .button-hover .text-list, body .list-hover .button-hover .text-list {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%; }
+        html .list-hover .button-hover .text-list.link-world, body .list-hover .button-hover .text-list.link-world {
+          background: url("../img/link_world_text.png") no-repeat center center;
+          background-size: 100%; }
+        html .list-hover .button-hover .text-list.hear-me, body .list-hover .button-hover .text-list.hear-me {
+          background: url("../img/hear_me_text.png") no-repeat center center;
+          background-size: 100%; }
+        html .list-hover .button-hover .text-list.AR-phabet, body .list-hover .button-hover .text-list.AR-phabet {
+          background: url("../img/AR_phabet_text.png") no-repeat center center;
+          background-size: 100%; }
+        html .list-hover .button-hover .text-list.interactive, body .list-hover .button-hover .text-list.interactive {
+          background: url("../img/interactive_actual_movie_text.png") no-repeat center center;
+          background-size: 100%; }
+        html .list-hover .button-hover .text-list.sumaho, body .list-hover .button-hover .text-list.sumaho {
+          background: url("../img/sumaho_text.png") no-repeat center center;
+          background-size: 100%; }
+      html .list-hover .button-hover:hover .text-btn, body .list-hover .button-hover:hover .text-btn {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%; }
+        html .list-hover .button-hover:hover .text-btn.link-world, body .list-hover .button-hover:hover .text-btn.link-world {
+          background: url("../img/link_world.png") no-repeat center center;
+          background-size: 100%; }
+        html .list-hover .button-hover:hover .text-btn.hear-me, body .list-hover .button-hover:hover .text-btn.hear-me {
+          background: url("../img/hear_me.png") no-repeat center center;
+          background-size: 100%; }
+        html .list-hover .button-hover:hover .text-btn.AR-phabet, body .list-hover .button-hover:hover .text-btn.AR-phabet {
+          background: url("../img/AR_phabet.png") no-repeat center center;
+          background-size: 100%; }
+        html .list-hover .button-hover:hover .text-btn.interactive, body .list-hover .button-hover:hover .text-btn.interactive {
+          background: url("../img/interactive.png") no-repeat center center;
+          background-size: 100%; }
+        html .list-hover .button-hover:hover .text-btn.sumaho, body .list-hover .button-hover:hover .text-btn.sumaho {
+          background: url("../img/sumaho.png") no-repeat center center;
+          background-size: 100%; }
+      html .list-hover .button-hover:hover .text-list, body .list-hover .button-hover:hover .text-list {
+        animation: 5s spinnow infinite linear;
+        -moz-animation: 5s spinnow infinite linear;
+        -webkit-animation: 5s spinnow infinite linear;
+        -ms-animation: 5s spinnow infinite linear; }
+        html .list-hover .button-hover:hover .text-list.link-world, body .list-hover .button-hover:hover .text-list.link-world {
+          background: url("../img/link_world_hover.png") no-repeat center center;
+          background-size: 100%; }
+        html .list-hover .button-hover:hover .text-list.hear-me, body .list-hover .button-hover:hover .text-list.hear-me {
+          background: url("../img/hear_me_hover.png") no-repeat center center;
+          background-size: 100%; }
+        html .list-hover .button-hover:hover .text-list.AR-phabet, body .list-hover .button-hover:hover .text-list.AR-phabet {
+          background: url("../img/AR_phabet_hover.png") no-repeat center center;
+          background-size: 100%; }
+        html .list-hover .button-hover:hover .text-list.interactive, body .list-hover .button-hover:hover .text-list.interactive {
+          background: url("../img/interactive_actual_movie_hover.png") no-repeat center center;
+          background-size: 100%; }
+        html .list-hover .button-hover:hover .text-list.sumaho, body .list-hover .button-hover:hover .text-list.sumaho {
+          background: url("../img/sumaho_hover.png") no-repeat center center;
+          background-size: 100%; }
+      html .list-hover .button-hover:hover .image-list.link-world, body .list-hover .button-hover:hover .image-list.link-world {
+        background: url("../img/link_world_pic_hover.png") no-repeat center center;
+        background-size: 100%; }
+      html .list-hover .button-hover:hover .image-list.hear-me, body .list-hover .button-hover:hover .image-list.hear-me {
+        background: url("../img/hear_me_pic_hover.png") no-repeat center center;
+        background-size: 100%; }
+      html .list-hover .button-hover:hover .image-list.interactive, body .list-hover .button-hover:hover .image-list.interactive {
+        background: url("../img/interactive_actual_movie_pic_hover.png") no-repeat center center;
+        background-size: 100%; }
+      html .list-hover .button-hover:hover .image-list.sumaho, body .list-hover .button-hover:hover .image-list.sumaho {
+        background: url("../img/sumaho_pic_hover.png") no-repeat center center;
+        background-size: 100%; }
+@-webkit-keyframes spinnow {
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg); } }
+@-moz-keyframes spinnow {
+  100% {
+    transform: rotate(360deg);
+    -moz-transform: rotate(360deg); } }
+@-ms-keyframes spinnow {
+  100% {
+    transform: rotate(360deg);
+    -ms-transform: rotate(360deg); } }
+  html #carousel_item, body #carousel_item {
+    display: none; }
+  html .carousel-inner .active.left, body .carousel-inner .active.left {
+    left: -33%; }
+  html .carousel-inner .active.right, body .carousel-inner .active.right {
+    left: 33%; }
+  html .carousel-inner .next, body .carousel-inner .next {
+    left: 33%; }
+  html .carousel-inner .prev, body .carousel-inner .prev {
+    left: -33%; }
+  html .carousel-control.left, body .carousel-control.left {
+    background-image: none; }
+  html .carousel-control.right, body .carousel-control.right {
+    background-image: none; }
+
+@media screen and (min-width: 1200px) {
+  html .content .man img, body .content .man img {
+    width: 45%; }
+  html .list-hover .button-hover, body .list-hover .button-hover {
+    height: 10vw;
+    width: 10vw; } }
+@media screen and (min-width: 1640px) {
+  html .content .man img, body .content .man img {
+    width: 30%; }
+  html .list-hover .button-hover, body .list-hover .button-hover {
+    height: 8vw;
+    width: 8vw; } }
+@media screen and (max-width: 950px) {
+  html .content .man img, body .content .man img {
+    width: 60%; }
+  html .list-hover .button-hover, body .list-hover .button-hover {
+    height: 12vw;
+    width: 12vw; } }
+@media screen and (max-width: 800px) {
+  html .nav-bar h1, body .nav-bar h1 {
+    font-size: 5vw;
+    text-align: center;
+    width: 100%;
+    padding: 0; }
+  html .nav-right, body .nav-right {
+    display: none; }
+  html .content .man, body .content .man {
+    top: 70px;
+    margin-left: 3%; }
+    html .content .man .man-sp, body .content .man .man-sp {
+      display: inline-block;
+      width: 85%; }
+    html .content .man .man-pc, body .content .man .man-pc {
+      display: none; }
+  html .content, html .content-front, body .content, body .content-front {
+    margin-left: -3%; }
+    html .content .block-bg .text-bg, html .content-front .block-bg .text-bg, body .content .block-bg .text-bg, body .content-front .block-bg .text-bg {
+      line-height: 35vw;
+      font-size: 45vw;
+      width: 115vw;
+      white-space: pre-wrap;
+      /* CSS3 */
+      white-space: -moz-pre-wrap;
+      /* Firefox */
+      white-space: -pre-wrap;
+      /* Opera <7 */
+      white-space: -o-pre-wrap;
+      /* Opera 7 */
+      word-wrap: break-word;
+      /* IE */ }
+      html .content .block-bg .text-bg span, html .content-front .block-bg .text-bg span, body .content .block-bg .text-bg span, body .content-front .block-bg .text-bg span {
+        letter-spacing: 1.5vw; }
+    html .content .block-bg .underline, html .content-front .block-bg .underline, body .content .block-bg .underline, body .content-front .block-bg .underline {
+      height: 0.5vw;
+      margin-top: 0.5%;
+      margin-left: -5%; }
+    html .content .block-bg .line, html .content-front .block-bg .line, body .content .block-bg .line, body .content-front .block-bg .line {
+      height: 15vw;
+      margin-left: -5%;
+      margin-top: 1%; }
+      html .content .block-bg .line p, html .content-front .block-bg .line p, body .content .block-bg .line p, body .content-front .block-bg .line p {
+        font-size: 9vw;
+        width: 84vw;
+        line-height: 4.4vw;
+        height: 11vw;
+        margin: 0 auto;
+        padding-top: 2.7vw;
+        text-align: center; }
+        html .content .block-bg .line p span, html .content-front .block-bg .line p span, body .content .block-bg .line p span, body .content-front .block-bg .line p span {
+          font-size: 6vw; }
+        html .content .block-bg .line p .break-line, html .content-front .block-bg .line p .break-line, body .content .block-bg .line p .break-line, body .content-front .block-bg .line p .break-line {
+          font-size: 5.5vw; }
+          html .content .block-bg .line p .break-line span, html .content-front .block-bg .line p .break-line span, body .content .block-bg .line p .break-line span, body .content-front .block-bg .line p .break-line span {
+            font-size: 4.5vw; }
+  html .content-front, body .content-front {
+    -moz-box-shadow: inset 0 -50vw 30vw -30vw rgba(0, 0, 0, 0.6);
+    -webkit-box-shadow: inset 0 -50vw 30vw -30vw rgba(0, 0, 0, 0.6);
+    box-shadow: inset 0 -50vw 30vw -30vw rgba(0, 0, 0, 0.6); }
+    html .content-front .text-bg, body .content-front .text-bg {
+      opacity: 0.2; }
+    html .content-front .block-bg .line, body .content-front .block-bg .line {
+      background: rgba(255, 12, 0, 0.2); }
+    html .content-front .block-bg .underline, body .content-front .block-bg .underline {
+      background: rgba(255, 12, 0, 0.2); }
+  html #carousel_item, body #carousel_item {
+    display: inline-block;
+    z-index: 12;
+    position: absolute;
+    bottom: 2vh; }
+  html .btn-sp, body .btn-sp {
+    width: 30vw;
+    height: 30vw; }
+    html .btn-sp .link-world, body .btn-sp .link-world {
+      width: 100%;
+      height: 100%;
+      background: url("../img/link_world_pic.png") no-repeat center center;
+      background-size: 100%; }
+    html .btn-sp .hear-me, body .btn-sp .hear-me {
+      width: 100%;
+      height: 100%;
+      background: url("../img/hear_me_pic.png") no-repeat center center;
+      background-size: 100%; }
+    html .btn-sp .AR-phabet, body .btn-sp .AR-phabet {
+      width: 100%;
+      height: 100%;
+      background: url("../img/AR_phabet_pic.png") no-repeat center center;
+      background-size: 100%; }
+    html .btn-sp .interactive, body .btn-sp .interactive {
+      width: 100%;
+      height: 100%;
+      background: url("../img/interactive_actual_movie_pic.png") no-repeat center center;
+      background-size: 100%; }
+    html .btn-sp .sumaho, body .btn-sp .sumaho {
+      width: 100%;
+      height: 100%;
+      background: url("../img/sumaho_pic.png") no-repeat center center;
+      background-size: 100%; }
+  html .list-hover, body .list-hover {
+    display: none; }
+  html .item, body .item {
+    -webkit-transition: none;
+    transition: none; }
+    html .item .col-xs-4:first-child .image-list, html .item .col-xs-4:last-child .image-list, body .item .col-xs-4:first-child .image-list, body .item .col-xs-4:last-child .image-list {
+      width: 50%;
+      height: 50%;
+      margin: 7vw auto; } }
+
+/*# sourceMappingURL=style.css.map */
