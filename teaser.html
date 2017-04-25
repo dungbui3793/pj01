@@ -70,10 +70,11 @@
 <div class="popup access-popup">
     <div class="popup__content">
         <div class="row clearfix">
-            <div class="col-sm-12 col-md-6">
-                <img src="img/map.jpg" alt="" />
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <div id="map"></div>
+                <!--<img src="img/map.jpg" alt="" />-->
             </div>
-            <div class="col-sm-12 col-md-6 access__text">
+            <div class="col-md-6 col-sm-12 col-xs-12 access__text">
                 <p class="popup__title">ACCESS</p>
                 <table class="access__text-01">
                     <tr>
@@ -109,7 +110,46 @@
 
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js"></script>
 <script src="js/index.js"></script>
 <script src="teaser/js/teaser.js"></script>
+<script>
+
+    function init(){
+        var image = new google.maps.MarkerImage(
+                'img/flag.png',
+                new google.maps.Size(36,40),    // size of the image
+                new google.maps.Point(0,0), // origin, in this case top-left corner
+                new google.maps.Point(25, 50)    // anchor, i.e. the point half-way along the bottom of the image
+        );
+        var myLatLng = {lat: 35.650434, lng: 139.710003};
+        var address = '東京都渋谷区東3-13-11 フロンティア恵比寿 8F';
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 17,
+            center: myLatLng,
+            disableDefaultUI: true
+        });
+        var geocoder = new google.maps.Geocoder();
+
+        geocoder.geocode({
+                    'address': address
+                },
+                function(results, status) {
+                    if(status == google.maps.GeocoderStatus.OK) {
+                        new google.maps.Marker({
+                            position: myLatLng,
+                            map: map,
+                            icon: image
+                        });
+                        google.maps.event.trigger(map, 'resize');
+                        map.setCenter(results[0].geometry.location);
+                    }
+                });
+    }
+
+    $(".nav-bar .access").click(function () {
+        init();
+    });
+</script>
 </body>
 </html>

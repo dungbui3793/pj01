@@ -55,7 +55,7 @@ $font-noto-medium: "NotoSan-Medium";
 .mobile {
   .main-content {
     bottom: 55px;
-    position: fixed;
+    //position: fixed;
     @media #{$info-phone-4} {
       bottom: 30px;
     }
@@ -260,7 +260,7 @@ html, body{
       }
       .line{
         line-height: 40px;
-        width: 100%;
+        width: 105%;
         margin-left: -3%;
         margin-top: -1.5%;
         height: 40px;
@@ -303,10 +303,10 @@ html, body{
         }
       }
       .underline{
-        width: 100%;
+        width: 105%;
         height: 0.4vw;
         margin-top: 0.3%;
-        margin-left: -2%;
+        margin-left: -3%;
         background: #ff0c00;
       }
     }
@@ -352,21 +352,23 @@ html, body{
 
   .main-content {
     text-align: center;
-    position: absolute;
+    //position: absolute;
     width: 100%;
-    bottom: 120px;
+    //bottom: 120px;
     z-index: 1;
     font-size: 90px;
     font-family: $font-din;
     line-height: 1.1;
     color: #333;
-    @media #{$info-tablet} {
-      bottom: 5%;
-    }
+    margin-top: 65px;
+    //@media #{$info-tablet} {
+    //  bottom: 5%;
+    //}
     @media #{$info-phone} {
       font-size: 50px;
-      bottom: 125px;
+      //bottom: 125px;
       line-height: 2;
+      margin-top: 10px;
     }
     @media #{$info-phone-4} {
       font-size: 40px;
@@ -462,6 +464,13 @@ html, body{
           display: block
         }
       }
+    }
+
+    #map {
+      width: 100%;
+      max-width: 480px;
+      height: 300px;
+      margin: auto;
     }
 
     &.message {
@@ -629,7 +638,7 @@ html, body{
         .underline{
           height: 0.5vw;
           margin-top: 0.5%;
-          margin-left: -5%;
+          margin-left: -10%;
         }
         .line{
           //height: 15vw;
