@@ -1,10 +1,4 @@
 @font-face {
-  font-family: "DIN Alternate";
-  src: url(../../font/din-alternate-regular.otf); }
-@font-face {
-  font-family: "Frutiger Next LT CE";
-  src: url(../../font/frutiger-next-lt-light.otf); }
-@font-face {
   font-family: 'FrutigerNextLT-Light';
   src: url("../../font/FrutigerNextLT-Light.eot?#iefix") format("embedded-opentype"), url("../../font/FrutigerNextLT-Light.woff") format("woff"), url("../../font/FrutigerNextLT-Light.ttf") format("truetype"), url("../../font/FrutigerNextLT-Light.svg#FrutigerNextLT-Light") format("svg");
   font-weight: normal;
@@ -110,7 +104,8 @@ html, body {
         html .nav-bar h1, body .nav-bar h1 {
           display: block;
           text-align: center;
-          line-height: 1.5; } }
+          line-height: 1.5;
+          font-size: 5vw; } }
     html .nav-bar .nav-right, body .nav-bar .nav-right {
       float: right;
       margin: 16px 0 0 5px; }
@@ -162,12 +157,29 @@ html, body {
       /* Chrome, Safari, Opera */
       transform: rotate(352deg); }
       html .content .block-bg .text-bg, html .content-front .block-bg .text-bg, body .content .block-bg .text-bg, body .content-front .block-bg .text-bg {
-        font-family: "DIN Alternate";
+        font-family: "DIN-RegularAlternate";
         font-size: 22vw;
         font-weight: bold;
         color: #ff0c00;
         line-height: 22vw;
         margin: 0; }
+        @media only screen and (max-width: 767px) {
+          html .content .block-bg .text-bg, html .content-front .block-bg .text-bg, body .content .block-bg .text-bg, body .content-front .block-bg .text-bg {
+            line-height: 35vw;
+            font-size: 45vw;
+            width: 115vw;
+            white-space: pre-wrap;
+            /* CSS3 */
+            white-space: -moz-pre-wrap;
+            /* Firefox */
+            white-space: -pre-wrap;
+            /* Opera <7 */
+            white-space: -o-pre-wrap;
+            /* Opera 7 */
+            word-wrap: break-word;
+            /* IE */ }
+            html .content .block-bg .text-bg span, html .content-front .block-bg .text-bg span, body .content .block-bg .text-bg span, body .content-front .block-bg .text-bg span {
+              letter-spacing: 1.5vw; } }
       html .content .block-bg .line, html .content-front .block-bg .line, body .content .block-bg .line, body .content-front .block-bg .line {
         line-height: 40px;
         width: 105%;
@@ -187,7 +199,8 @@ html, body {
         @media only screen and (max-width: 767px) {
           html .content .block-bg .line, html .content-front .block-bg .line, body .content .block-bg .line, body .content-front .block-bg .line {
             font-size: 9.5vw;
-            height: 17vw; } }
+            height: 17vw;
+            margin-top: 1%; } }
         @media only screen and (max-width: 320px) {
           html .content .block-bg .line, html .content-front .block-bg .line, body .content .block-bg .line, body .content-front .block-bg .line {
             padding-top: 6px; } }
@@ -211,6 +224,11 @@ html, body {
         margin-top: 0.3%;
         margin-left: -3%;
         background: #ff0c00; }
+        @media only screen and (max-width: 767px) {
+          html .content .block-bg .underline, html .content-front .block-bg .underline, body .content .block-bg .underline, body .content-front .block-bg .underline {
+            height: 0.5vw;
+            margin-top: 0.5%;
+            margin-left: -10%; } }
     html .content .man, html .content-front .man, body .content .man, body .content-front .man {
       position: absolute;
       top: 20px;
@@ -221,7 +239,8 @@ html, body {
       text-align: center; }
       @media only screen and (max-width: 767px) {
         html .content .man, html .content-front .man, body .content .man, body .content-front .man {
-          top: 40px; } }
+          top: 40px;
+          margin-left: 3%; } }
       @media only screen and (max-width: 767px) {
         html .content .man img, html .content-front .man img, body .content .man img, body .content-front .man img {
           width: 45%; } }
@@ -234,10 +253,24 @@ html, body {
     top: 0; }
     html .content-front .text-bg, body .content-front .text-bg {
       opacity: 0.1; }
+      @media only screen and (max-width: 767px) {
+        html .content-front .text-bg, body .content-front .text-bg {
+          opacity: 0.2; } }
     html .content-front .block-bg .line, body .content-front .block-bg .line {
       background: rgba(255, 12, 0, 0.1); }
+      @media only screen and (max-width: 767px) {
+        html .content-front .block-bg .line, body .content-front .block-bg .line {
+          background: rgba(255, 12, 0, 0.2); } }
     html .content-front .block-bg .underline, body .content-front .block-bg .underline {
       background: rgba(255, 12, 0, 0.1); }
+      @media only screen and (max-width: 767px) {
+        html .content-front .block-bg .underline, body .content-front .block-bg .underline {
+          background: rgba(255, 12, 0, 0.2); } }
+    @media only screen and (max-width: 767px) {
+      html .content-front, body .content-front {
+        -moz-box-shadow: inset 0 -50vw 30vw -30vw rgba(0, 0, 0, 0.6);
+        -webkit-box-shadow: inset 0 -50vw 30vw -30vw rgba(0, 0, 0, 0.6);
+        box-shadow: inset 0 -50vw 30vw -30vw rgba(0, 0, 0, 0.6); } }
   html .main-content, body .main-content {
     text-align: center;
     width: 100%;
@@ -336,6 +369,9 @@ html, body {
       max-width: 480px;
       height: 300px;
       margin: auto; }
+      @media only screen and (max-width: 767px) {
+        html .popup #map, body .popup #map {
+          height: 250px; } }
     html .popup.access-popup .popup__content, body .popup.access-popup .popup__content {
       width: 1000px;
       margin: auto;
@@ -385,7 +421,7 @@ html, body {
       html .popup.access-popup .access__text .popup__title, body .popup.access-popup .access__text .popup__title {
         font-family: "FrutigerNextLT-Light";
         font-size: 38px;
-        margin-top: 18px;
+        margin-top: 3px;
         margin-bottom: 4px; }
         @media only screen and (max-width: 767px) {
           html .popup.access-popup .access__text .popup__title, body .popup.access-popup .access__text .popup__title {
@@ -397,116 +433,6 @@ html, body {
         html .popup.access-popup .access__text table td:first-child, body .popup.access-popup .access__text table td:first-child {
           white-space: nowrap; }
 
-@media screen and (min-width: 1200px) {
-  html .list-hover .button-hover, body .list-hover .button-hover {
-    height: 10vw;
-    width: 10vw; } }
-@media screen and (min-width: 1640px) {
-  html .list-hover .button-hover, body .list-hover .button-hover {
-    height: 8vw;
-    width: 8vw; } }
-@media screen and (max-width: 950px) {
-  html .list-hover .button-hover, body .list-hover .button-hover {
-    height: 12vw;
-    width: 12vw; } }
-@media screen and (max-width: 800px) {
-  html .nav-bar h1, body .nav-bar h1 {
-    font-size: 5vw; }
-  html .content .man, body .content .man {
-    margin-left: 3%; }
-    html .content .man .man-sp, body .content .man .man-sp {
-      display: inline-block;
-      width: 85%; }
-    html .content .man .man-pc, body .content .man .man-pc {
-      display: none; }
-  html .content .block-bg .text-bg, html .content-front .block-bg .text-bg, body .content .block-bg .text-bg, body .content-front .block-bg .text-bg {
-    line-height: 35vw;
-    font-size: 45vw;
-    width: 115vw;
-    white-space: pre-wrap;
-    /* CSS3 */
-    white-space: -moz-pre-wrap;
-    /* Firefox */
-    white-space: -pre-wrap;
-    /* Opera <7 */
-    white-space: -o-pre-wrap;
-    /* Opera 7 */
-    word-wrap: break-word;
-    /* IE */ }
-    html .content .block-bg .text-bg span, html .content-front .block-bg .text-bg span, body .content .block-bg .text-bg span, body .content-front .block-bg .text-bg span {
-      letter-spacing: 1.5vw; }
-  html .content .block-bg .underline, html .content-front .block-bg .underline, body .content .block-bg .underline, body .content-front .block-bg .underline {
-    height: 0.5vw;
-    margin-top: 0.5%;
-    margin-left: -10%; }
-  html .content .block-bg .line, html .content-front .block-bg .line, body .content .block-bg .line, body .content-front .block-bg .line {
-    margin-top: 1%; }
-    html .content .block-bg .line p, html .content-front .block-bg .line p, body .content .block-bg .line p, body .content-front .block-bg .line p {
-      font-size: 9vw;
-      width: 84vw;
-      line-height: 4.4vw;
-      height: 11vw;
-      margin: 0 auto;
-      padding-top: 2.7vw;
-      text-align: center; }
-      html .content .block-bg .line p span, html .content-front .block-bg .line p span, body .content .block-bg .line p span, body .content-front .block-bg .line p span {
-        font-size: 6vw; }
-      html .content .block-bg .line p .break-line, html .content-front .block-bg .line p .break-line, body .content .block-bg .line p .break-line, body .content-front .block-bg .line p .break-line {
-        font-size: 5.5vw; }
-        html .content .block-bg .line p .break-line span, html .content-front .block-bg .line p .break-line span, body .content .block-bg .line p .break-line span, body .content-front .block-bg .line p .break-line span {
-          font-size: 4.5vw; }
-  html .content-front, body .content-front {
-    -moz-box-shadow: inset 0 -50vw 30vw -30vw rgba(0, 0, 0, 0.6);
-    -webkit-box-shadow: inset 0 -50vw 30vw -30vw rgba(0, 0, 0, 0.6);
-    box-shadow: inset 0 -50vw 30vw -30vw rgba(0, 0, 0, 0.6); }
-    html .content-front .text-bg, body .content-front .text-bg {
-      opacity: 0.2; }
-    html .content-front .block-bg .line, body .content-front .block-bg .line {
-      background: rgba(255, 12, 0, 0.2); }
-    html .content-front .block-bg .underline, body .content-front .block-bg .underline {
-      background: rgba(255, 12, 0, 0.2); }
-  html #carousel_item, body #carousel_item {
-    display: inline-block;
-    z-index: 12;
-    position: absolute;
-    bottom: 2vh; }
-  html .btn-sp, body .btn-sp {
-    width: 30vw;
-    height: 30vw; }
-    html .btn-sp .link-world, body .btn-sp .link-world {
-      width: 100%;
-      height: 100%;
-      background: url("../../img/link_world_pic.png") no-repeat center center;
-      background-size: 100%; }
-    html .btn-sp .hear-me, body .btn-sp .hear-me {
-      width: 100%;
-      height: 100%;
-      background: url("../../img/hear_me_pic.png") no-repeat center center;
-      background-size: 100%; }
-    html .btn-sp .AR-phabet, body .btn-sp .AR-phabet {
-      width: 100%;
-      height: 100%;
-      background: url("../../img/AR_phabet_pic.png") no-repeat center center;
-      background-size: 100%; }
-    html .btn-sp .interactive, body .btn-sp .interactive {
-      width: 100%;
-      height: 100%;
-      background: url("../../img/interactive_actual_movie_pic.png") no-repeat center center;
-      background-size: 100%; }
-    html .btn-sp .sumaho, body .btn-sp .sumaho {
-      width: 100%;
-      height: 100%;
-      background: url("../../img/sumaho_pic.png") no-repeat center center;
-      background-size: 100%; }
-  html .list-hover, body .list-hover {
-    display: none; }
-  html .item, body .item {
-    -webkit-transition: none;
-    transition: none; }
-    html .item .col-xs-4:first-child .image-list, html .item .col-xs-4:last-child .image-list, body .item .col-xs-4:first-child .image-list, body .item .col-xs-4:last-child .image-list {
-      width: 50%;
-      height: 50%;
-      margin: 7vw auto; } }
 .teaser-02 {
   display: flex;
   justify-content: center; }
