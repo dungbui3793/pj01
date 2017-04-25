@@ -17,11 +17,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="teaser.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="teaser.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/teaser/css/teaser.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="472" column="19" lean-forward="false" selection-start-line="472" selection-start-column="19" selection-end-line="472" selection-end-column="19" />
+            <state relative-caret-position="577">
+              <caret line="207" column="23" lean-forward="false" selection-start-line="207" selection-start-column="23" selection-end-line="207" selection-end-column="23" />
               <folding>
                 <element signature="e#3701#3774#0" expanded="false" />
                 <element signature="e#3793#3827#0" expanded="false" />
@@ -33,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="teaser.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="teaser.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/teaser.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="82" column="48" lean-forward="true" selection-start-line="82" selection-start-column="48" selection-end-line="82" selection-end-column="48" />
+            <state relative-caret-position="675">
+              <caret line="149" column="0" lean-forward="true" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -65,9 +65,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>line-hei</find>
-      <find>nav-bar</find>
-      <find>popup__title</find>
       <find>margin-left: -5%;</find>
       <find>padding-lef</find>
       <find>col-xs-6</find>
@@ -95,6 +92,9 @@
       <find>.popup</find>
       <find>#map</find>
       <find>col-sm-12 col-md-6 access__text</find>
+      <find>nav</find>
+      <find>http://www.gumi.co.jp/</find>
+      <find>東京都渋谷区東3-13-11 A-PLACE恵比寿東</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -106,8 +106,8 @@
         <option value="$PROJECT_DIR$/teaser-02.html" />
         <option value="$PROJECT_DIR$/teaser/js/teaser.js" />
         <option value="$PROJECT_DIR$/js/index.js" />
-        <option value="$PROJECT_DIR$/teaser.html" />
         <option value="$PROJECT_DIR$/teaser/css/teaser.scss" />
+        <option value="$PROJECT_DIR$/teaser.html" />
       </list>
     </option>
   </component>
@@ -367,12 +367,12 @@
       <workItem from="1492767459657" duration="3004000" />
       <workItem from="1492998139557" duration="2326000" />
       <workItem from="1493003222557" duration="19126000" />
-      <workItem from="1493084379074" duration="7090000" />
+      <workItem from="1493084379074" duration="8624000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56856000" />
+    <option name="totallyTimeSpent" value="58390000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="977" extended-state="6" />
@@ -638,18 +638,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/teaser.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="82" column="48" lean-forward="true" selection-start-line="82" selection-start-column="48" selection-end-line="82" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/teaser/css/teaser.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="472" column="19" lean-forward="false" selection-start-line="472" selection-start-column="19" selection-end-line="472" selection-end-column="19" />
+        <state relative-caret-position="577">
+          <caret line="207" column="23" lean-forward="false" selection-start-line="207" selection-start-column="23" selection-end-line="207" selection-end-column="23" />
           <folding>
             <element signature="e#3701#3774#0" expanded="false" />
             <element signature="e#3793#3827#0" expanded="false" />
@@ -657,6 +649,14 @@
             <element signature="e#3903#3937#0" expanded="false" />
             <element signature="e#3958#3992#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/teaser.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="149" column="0" lean-forward="true" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

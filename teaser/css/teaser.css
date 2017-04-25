@@ -128,7 +128,8 @@ html, body {
       html .nav-bar .nav-right div, body .nav-bar .nav-right div {
         display: inline-block;
         font-size: 16px;
-        margin-right: 15px; }
+        margin-right: 15px;
+        cursor: pointer; }
         @media only screen and (max-width: 767px) {
           html .nav-bar .nav-right div, body .nav-bar .nav-right div {
             width: 50%; } }
