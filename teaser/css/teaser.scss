@@ -252,7 +252,8 @@ html, body{
         margin: 0;
         @media #{$info-phone} {
           line-height: 35vw;
-          font-size: 45vw;
+          font-size: 42vw;
+
           width: 115vw;
           white-space: pre-wrap;      /* CSS3 */
           white-space: -moz-pre-wrap; /* Firefox */
@@ -574,6 +575,13 @@ html, body{
         }
         table {
           td {
+            a {
+              color: #fff;
+              text-decoration: none;
+              &:hover {
+                opacity: .8;
+              }
+            }
             &:first-child {
               white-space: nowrap;
             }

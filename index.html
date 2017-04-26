@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
     <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>GUMIKE 2017</title>
 </head>
@@ -19,21 +21,21 @@
 <div class="content">
     <div class="block-bg">
         <p class="text-bg">YOKU<span>BARI</span></p>
-        <div class="line"><p></p></div>
+        <div class="line"></div>
         <div class="underline"></div>
     </div>
     <div class="man">
-        <img src="img/man.png" class="man-pc">
-        <img src="img/man-sp.png" class="man-sp">
+        <img src="img/man-01.png" class="man-pc">
     </div>
 </div>
 <div class="content-front">
     <div class="block-bg">
         <p class="text-bg">YOKU<span>BARI</span></p>
-        <div class="line"><p>2017.5.23<span>(Tue)</span> - 26<span>(Fri)</span><span class="break-line"> 11:00 - 18:00 <span>(Last Day 17:00)</span></span></p></div>
+        <div class="line">2017.5.23<small>(Tue)</small> - 26<small>(Fri)</small><span class="break-line"> 10:00 - 18:00 <span>(Last Day 17:00)</span></span></div>
         <div class="underline"></div>
     </div>
 </div>
+<div id="man-block"></div>
 <div class="list-hover">
     <div class="button-hover">
         <div class="image-list link-world">
@@ -72,71 +74,189 @@
     </div>
 </div>
 
-<div id="carousel_item" class="carousel">
+<div class="slick-slider slider">
+    <div><img src="img/link_world_pic.png" /></div>
+    <div><img src="img/hear_me_pic.png" /></div>
+    <div><img src="img/AR_phabet_pic.png" /></div>
+    <div><img src="img/interactive_actual_movie_pic.png" /></div>
+    <div><img src="img/sumaho_pic.png" /></div>
 
-    <div class="carousel-inner">
-        <div class="item active">
-            <div class="col-xs-4">
-                <a href="#">
-                    <div class="btn-sp">
-                        <div class="image-list link-world">
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="item">
-            <div class="col-xs-4">
-                <a href="#">
-                    <div class="btn-sp">
-                        <div class="image-list hear-me">
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="item">
-            <div class="col-xs-4"><a href="#">
-                <div class="btn-sp">
-                    <div class="image-list AR-phabet">
-                    </div>
-                </div>
-            </a></div>
-        </div>
-        <div class="item">
-            <div class="col-xs-4">
-                <a href="#">
-                    <div class="btn-sp">
-                        <div class="image-list interactive">
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="item">
-            <div class="col-xs-4">
-                <a href="#">
-                    <div class="btn-sp">
-                        <div class="image-list sumaho">
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
+</div>
+
+<!--<div id="carousel_item" class="carousel">-->
+
+    <!--<div class="carousel-inner">-->
+        <!--<div class="item active">-->
+            <!--<div class="col-xs-4">-->
+                <!--<a href="#">-->
+                    <!--<div class="btn-sp">-->
+                        <!--<div class="image-list link-world">-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="item">-->
+            <!--<div class="col-xs-4">-->
+                <!--<a href="#">-->
+                    <!--<div class="btn-sp">-->
+                        <!--<div class="image-list hear-me">-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="item">-->
+            <!--<div class="col-xs-4"><a href="#">-->
+                <!--<div class="btn-sp">-->
+                    <!--<div class="image-list AR-phabet">-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</a></div>-->
+        <!--</div>-->
+        <!--<div class="item">-->
+            <!--<div class="col-xs-4">-->
+                <!--<a href="#">-->
+                    <!--<div class="btn-sp">-->
+                        <!--<div class="image-list interactive">-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="item">-->
+            <!--<div class="col-xs-4">-->
+                <!--<a href="#">-->
+                    <!--<div class="btn-sp">-->
+                        <!--<div class="image-list sumaho">-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <!--<ol class="carousel-indicators">-->
+        <!--<li data-target="#carousel_item" data-slide-to="0" class="active"></li>-->
+        <!--<li data-target="#carousel_item" data-slide-to="1"></li>-->
+        <!--<li data-target="#carousel_item" data-slide-to="2"></li>-->
+        <!--<li data-target="#carousel_item" data-slide-to="3"></li>-->
+        <!--<li data-target="#carousel_item" data-slide-to="4"></li>-->
+    <!--</ol>-->
+
+    <!--&lt;!&ndash; Controls &ndash;&gt;-->
+    <!--&lt;!&ndash;<a class="left carousel-control" href="#carousel_item" role="button" data-slide="prev">&ndash;&gt;-->
+        <!--&lt;!&ndash;<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>&ndash;&gt;-->
+        <!--&lt;!&ndash;<span class="sr-only">Previous</span>&ndash;&gt;-->
+    <!--&lt;!&ndash;</a>&ndash;&gt;-->
+    <!--&lt;!&ndash;<a class="right carousel-control" href="#carousel_item" role="button" data-slide="next">&ndash;&gt;-->
+        <!--&lt;!&ndash;<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>&ndash;&gt;-->
+        <!--&lt;!&ndash;<span class="sr-only">Next</span>&ndash;&gt;-->
+    <!--&lt;!&ndash;</a>&ndash;&gt;-->
+<!--</div>-->
+
+<div class="popup message">
+    <div class="popup__content">
+        <p class="popup__title">こんにちは。</p>
+        <p class="popup__text-01">おかげさまで、毎年みなさまと共に新しい<br class="visible-xs"/>コンテンツのカタチを追求してきた<br class="disable-xs"/>
+            「グミケ」も10回目の開催となりました。<br />
+            最新のデジタル技術に<br class="visible-xs"/>ちょっとした「アイデア」をプラスしたものを実際に触れて頂くこの内覧会ですが、</p>
+        <p class="popup__text-02">今回の開催テーマは「よくばり」。</p>
+        <p class="popup__text-03">日々進化していくデジタル技術をアレもコレも取り入れたい、試してみたい、提案してみたい。<br />
+            そして社会がもっと元気になるお手伝いがしたい。<br />
+            そんな「よくばり」な気持ちがたくさん詰まった<br class="visible-xs"/>「グミケ」にはきっと新しい驚きと発見があります。</p>
+        <p class="popup__bottom">from gumi</p>
+        <p class="popup__close">
+            <img src="img/icon-close.png" alt="" /><br />
+            close
+        </p>
     </div>
+</div>
 
-    <!-- Controls -->
-    <a class="left carousel-control" href="#carousel_item" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#carousel_item" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
+<div class="popup access-popup">
+    <div class="popup__content">
+        <div class="row clearfix">
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <div id="map"></div>
+                <!--<img src="img/map.jpg" alt="" />-->
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12 access__text">
+                <p class="popup__title">ACCESS</p>
+                <table class="access__text-01">
+                    <tr>
+                        <td>住所：</td>
+                        <td>東京都渋谷区東3-13-11 A-PLACE恵比寿東 8F<br />（旧：フロンティア恵比寿）<br />
+                            JR恵比寿駅西口より徒歩6分<br />
+                            東京メトロ日比谷線恵比寿駅5番出口より徒歩5分</td>
+                    </tr>
+                    <tr>
+                        <td>TEL：</td>
+                        <td>03-6821-9393</td>
+                    </tr>
+                    <tr>
+                        <td>FAX：</td>
+                        <td>03-6821-9395</td>
+                    </tr>
+                    <tr>
+                        <td>URL：</td>
+                        <td><a href="http://www.gumi.co.jp/" target="_blank">http://www.gumi.co.jp/</a> </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="popup__close__wrap">
+                <p class="popup__close">
+                    <img src="img/icon-close.png" alt="" /><br />
+                    close
+                </p>
+            </div>
+        </div>
+
+    </div>
 </div>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCVlollj3zUfhpNGXHnqz4j_2Jz8wdVrE&callback=init"
+        type="text/javascript"></script>
+<script src="js/slick.min.js"></script>
 <script src="js/index.js"></script>
+<script src="teaser/js/teaser.js"></script>
+<script>
+
+    function init(){
+        var image = new google.maps.MarkerImage(
+                'img/flag.png',
+                new google.maps.Size(36,40),    // size of the image
+                new google.maps.Point(0,0), // origin, in this case top-left corner
+                new google.maps.Point(25, 50)    // anchor, i.e. the point half-way along the bottom of the image
+        );
+        var myLatLng = {lat: 35.650434, lng: 139.710003};
+        var address = '東京都渋谷区東3-13-11 フロンティア恵比寿 8F';
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 17,
+            center: myLatLng,
+            disableDefaultUI: true
+        });
+        var geocoder = new google.maps.Geocoder();
+
+        geocoder.geocode({
+                    'address': address
+                },
+                function(results, status) {
+                    if(status == google.maps.GeocoderStatus.OK) {
+                        new google.maps.Marker({
+                            position: myLatLng,
+                            map: map,
+                            icon: image
+                        });
+                        google.maps.event.trigger(map, 'resize');
+                        map.setCenter(results[0].geometry.location);
+                    }
+                });
+    }
+
+    $(".nav-bar .access").click(function () {
+        init();
+    });
+</script>
 </body>
 </html>

@@ -166,7 +166,7 @@ html, body {
         @media only screen and (max-width: 767px) {
           html .content .block-bg .text-bg, html .content-front .block-bg .text-bg, body .content .block-bg .text-bg, body .content-front .block-bg .text-bg {
             line-height: 35vw;
-            font-size: 45vw;
+            font-size: 42vw;
             width: 115vw;
             white-space: pre-wrap;
             /* CSS3 */
@@ -430,6 +430,11 @@ html, body {
         vertical-align: top;
         line-height: 1.7;
         padding-bottom: 11px; }
+        html .popup.access-popup .access__text table td a, body .popup.access-popup .access__text table td a {
+          color: #fff;
+          text-decoration: none; }
+          html .popup.access-popup .access__text table td a:hover, body .popup.access-popup .access__text table td a:hover {
+            opacity: .8; }
         html .popup.access-popup .access__text table td:first-child, body .popup.access-popup .access__text table td:first-child {
           white-space: nowrap; }
 

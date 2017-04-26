@@ -1,21 +1,28 @@
-$('#carousel_item').carousel({
-  interval: 10000
-})
+// $('#carousel_item').carousel({
+//   interval: 10000
+// })
 
-$('.carousel .item').each(function(){
-  var next = $(this).next();
-  if (!next.length) {
-    next = $(this).siblings(':first');
-  }
-  next.children(':first-child').clone().appendTo($(this));
-
-  if (next.next().length>0) {
-    next.next().children(':first-child').clone().appendTo($(this));
-  }
-  else {
-    $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
-  }
+$('.slick-slider').slick({
+    centerMode: true,
+    centerPadding: '60px',
+    slidesToShow: 3,
+    dots: true,
 });
+//
+// $('.carousel .item').each(function(){
+//   var next = $(this).next();
+//   if (!next.length) {
+//     next = $(this).siblings(':first');
+//   }
+//   next.children(':first-child').clone().appendTo($(this));
+//
+//   if (next.next().length>0) {
+//     next.next().children(':first-child').clone().appendTo($(this));
+//   }
+//   else {
+//     $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+//   }
+// });
 
 function detectmob() {
     if( navigator.userAgent.match(/Android/i)
@@ -88,5 +95,54 @@ $(function () {
         $(".popup").fadeOut(300);
     });
 
+    if($(window).width() > 767) {
+        $("#man-block").width($(".content .man .man-pc").width()).height($(".content .man .man-pc").height());
+
+        $("#man-block").mouseover(function () {
+            var items = ["img/man-01.png","img/man-02.png","img/man-03.png","img/man-04.png","img/man-05.png"];
+            var randomItem = items[Math.floor(Math.random()*items.length)];
+
+            if(randomItem == $(".content .man .man-pc").attr('src')) {
+                randomItem = items[Math.floor(Math.random()*items.length)];
+                $(".content .man .man-pc").attr("src",randomItem);
+            } else {
+                $(".content .man .man-pc").attr("src",randomItem);
+            }
+        })
+    } else {
+        $("#man-block").width(0);
+        $(".content .man .man-pc").attr("src","img/man-01.png");
+    }
+
+
 })
 
+$(window).load(function () {
+    if($(window).width() > 767) {
+        $("#man-block").width($(".content .man .man-pc").width()).height($(".content .man .man-pc").height());
+
+    } else {
+
+    }
+})
+
+$(window).resize(function () {
+    if($(window).width() > 767) {
+        $("#man-block").width($(".content .man .man-pc").width()).height($(".content .man .man-pc").height());
+
+        $("#man-block").mouseover(function () {
+            var items = ["img/man-01.png","img/man-02.png","img/man-03.png","img/man-04.png","img/man-05.png"];
+            var randomItem = items[Math.floor(Math.random()*items.length)];
+
+            if(randomItem == $(".content .man .man-pc").attr('src')) {
+                randomItem = items[Math.floor(Math.random()*items.length)];
+                $(".content .man .man-pc").attr("src",randomItem);
+            } else {
+                $(".content .man .man-pc").attr("src",randomItem);
+            }
+        })
+    } else {
+        $("#man-block").width(0);
+        $(".content .man .man-pc").attr("src","img/man-01.png");
+    }
+})
