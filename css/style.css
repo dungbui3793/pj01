@@ -25,6 +25,78 @@ html, body {
   background: #daddea;
   overflow: hidden; }
 
+.mobile .nav-bar {
+  position: fixed;
+  width: 100%;
+  margin-top: 0; }
+  @media only screen and (max-width: 320px) {
+    .mobile .nav-bar .nav-right {
+      bottom: 0; } }
+@media only screen and (max-width: 320px) {
+  .mobile .popup .popup__content .popup__text-01, .mobile .popup .popup__content .popup__text-03 {
+    font-size: 12px; }
+  .mobile .popup .popup__content .popup__title {
+    margin-bottom: 17px; }
+  .mobile .popup .popup__content .popup__text-01 {
+    margin-bottom: 12px; }
+  .mobile .popup .popup__content .popup__text-02 {
+    margin-bottom: 10px;
+    font-size: 14px; }
+  .mobile .popup .popup__content .popup__text-03 {
+    margin-bottom: 20px; } }
+.mobile .popup .popup__close {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%); }
+  @media only screen and (max-width: 320px) {
+    .mobile .popup .popup__close {
+      bottom: 0; } }
+.mobile .popup.access-popup .popup__content .row {
+  margin-top: -70px; }
+  .mobile .popup.access-popup .popup__content .row .access__text {
+    font-size: 11px; }
+  .mobile .popup.access-popup .popup__content .row .access__text table td {
+    padding-bottom: 0; }
+  @media only screen and (max-width: 320px) {
+    .mobile .popup.access-popup .popup__content .row .popup__title {
+      margin-top: 0; } }
+.mobile .content-front .block-bg .line, .mobile .content .block-bg .line {
+  padding-top: 0;
+  line-height: 35px;
+  height: 16vw;
+  font-size: 9vw; }
+  .mobile .content-front .block-bg .line .break-line, .mobile .content .block-bg .line .break-line {
+    font-size: 60%; }
+.mobile .slider.owl-carousel {
+  bottom: 8%; }
+@media only screen and (max-width: 320px) {
+  .mobile .slider.owl-carousel {
+    bottom: 5%; }
+    .mobile .slider.owl-carousel .owl-item.center.active img {
+      transform: scale(1.8); } }
+
+.android .nav-bar h1 {
+  margin-top: 10px; }
+.android .content .block-bg, .android .content-front .block-bg {
+  top: 10%; }
+  .android .content .block-bg .line, .android .content-front .block-bg .line {
+    padding-top: 0; }
+  .android .content .block-bg .text-bg, .android .content-front .block-bg .text-bg {
+    font-size: 43vw; }
+.android .main-content {
+  line-height: 2; }
+.android .popup .popup__content .row .col-md-6:first-child {
+  margin-bottom: 5px; }
+.android .popup .popup__content .popup__title {
+  margin-bottom: 17px; }
+.android .popup .popup__content .popup__text-01 {
+  margin-bottom: 12px; }
+.android .popup .popup__content .popup__text-02 {
+  margin-bottom: 10px; }
+.android .popup .popup__content .popup__text-03 {
+  margin-bottom: 20px; }
+
 .nav-bar {
   z-index: 10;
   position: relative;
@@ -95,7 +167,7 @@ html, body {
     transform: rotate(352deg); }
     @media only screen and (max-width: 767px) {
       .content .block-bg, .content-front .block-bg {
-        margin-top: -20px; } }
+        margin-top: -130px; } }
     .content .block-bg .text-bg, .content-front .block-bg .text-bg {
       font-family: "DIN-RegularAlternate";
       font-size: 22vw;
@@ -106,7 +178,7 @@ html, body {
       @media only screen and (max-width: 767px) {
         .content .block-bg .text-bg, .content-front .block-bg .text-bg {
           line-height: 35vw;
-          font-size: 45vw;
+          font-size: 42vw;
           width: 115vw;
           white-space: pre-wrap;
           /* CSS3 */
@@ -315,6 +387,9 @@ html, body {
     @media only screen and (max-width: 767px) {
       .popup #map {
         height: 250px; } }
+    @media only screen and (max-width: 320px) {
+      .popup #map {
+        height: 200px; } }
   .popup.access-popup .popup__content {
     width: 1000px;
     margin: auto;
@@ -399,7 +474,8 @@ html .list-hover, body .list-hover {
     width: 11vw;
     margin: 0 1vw;
     display: inline-block;
-    position: relative; }
+    position: relative;
+    cursor: pointer; }
     html .list-hover .button-hover .image-list, body .list-hover .button-hover .image-list {
       height: 100%;
       width: 100%; }
@@ -520,15 +596,72 @@ html .carousel-control.right, body .carousel-control.right {
 .slick-slide img {
   width: 100%; }
 
-.slick-slider {
-  position: absolute;
+.owl-carousel .owl-item img {
+  width: auto; }
+
+.slider.owl-carousel {
+  position: fixed;
   bottom: 0;
   z-index: 99;
   width: 100%;
   display: none; }
   @media only screen and (max-width: 767px) {
-    .slick-slider {
-      display: block; } }
+    .slider.owl-carousel {
+      display: block;
+      margin-bottom: 0;
+      bottom: 13%; } }
+  .slider.owl-carousel .owl-stage {
+    margin-left: -30px;
+    width: 974px !important; }
+  .slider.owl-carousel .owl-item > div {
+    margin-top: 25px; }
+  .slider.owl-carousel .owl-item img {
+    width: 60px;
+    transition: .5s; }
+  .slider.owl-carousel .owl-item p {
+    display: none;
+    color: #fff; }
+  .slider.owl-carousel .owl-item.center.active {
+    position: relative; }
+    .slider.owl-carousel .owl-item.center.active > div {
+      padding: 25px;
+      margin-top: 0;
+      position: relative; }
+      .slider.owl-carousel .owl-item.center.active > div:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url("../img/link-hover-sp.png");
+        background-size: cover;
+        top: 0;
+        left: 0;
+        z-index: 1; }
+    .slider.owl-carousel .owl-item.center.active p {
+      display: block;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+      width: 100%;
+      left: 0;
+      z-index: 2; }
+    .slider.owl-carousel .owl-item.center.active img {
+      transform: scale(1.83); }
+  .slider.owl-carousel .owl-dots {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center; }
+    .slider.owl-carousel .owl-dots .owl-dot span {
+      margin: 0 3px;
+      width: 4px;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.6); }
+    .slider.owl-carousel .owl-dots .owl-dot.active span {
+      width: 10px;
+      height: 10px;
+      background: white; }
 
 @media screen and (min-width: 1200px) {
   html .list-hover .button-hover, body .list-hover .button-hover {
