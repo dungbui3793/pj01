@@ -98,6 +98,7 @@ $(function () {
         $(".content .man .man-pc").attr("src","img/man-01.png");
     }
 
+    $(".content .list-hover").height($(".content-front .list-hover").height());
 
 })
 
@@ -129,5 +130,8 @@ $(window).resize(function () {
         $("#man-block").width(0);
         $(".content .man .man-pc").attr("src","img/man-01.png");
     }
+
+    $(".content .list-hover").height($(".content-front .list-hover").height());
+
 
 })

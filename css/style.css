@@ -464,10 +464,14 @@ html, body {
   z-index: 9; }
 
 html .list-hover, body .list-hover {
-  position: absolute;
   width: 100vw;
   bottom: 50px;
-  text-align: center; }
+  text-align: center;
+  z-index: 10;
+  margin-top: 100px; }
+  @media only screen and (max-width: 767px) {
+    html .list-hover, body .list-hover {
+      display: none; } }
   html .list-hover .button-hover, body .list-hover .button-hover {
     z-index: 11;
     height: 11vw;
@@ -709,8 +713,6 @@ html .carousel-control.right, body .carousel-control.right {
       height: 100%;
       background: url("../img/sumaho_pic.png") no-repeat center center;
       background-size: 100%; }
-  html .list-hover, body .list-hover {
-    display: none; }
   html .item, body .item {
     -webkit-transition: none;
     transition: none; }
