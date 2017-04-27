@@ -1,0 +1,266 @@
+@font-face {
+  font-family: 'FrutigerNextLT-Light';
+  src: url("../font/FrutigerNextLT-Light.eot?#iefix") format("embedded-opentype"), url("../font/FrutigerNextLT-Light.woff") format("woff"), url("../font/FrutigerNextLT-Light.ttf") format("truetype"), url("../font/FrutigerNextLT-Light.svg#FrutigerNextLT-Light") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'NotoSan-Light';
+  src: url("../font/NotoSansCJKjp-Light.eot?#iefix") format("embedded-opentype"), url("../font/NotoSansCJKjp-Light.woff") format("woff"), url("../font/NotoSansCJKjp-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'NotoSan-Medium';
+  src: url("../font/NotoSansCJKjp-Medium.eot?#iefix") format("embedded-opentype"), url("../font/NotoSansCJKjp-Medium.woff") format("woff"), url("../font/NotoSansCJKjp-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'DIN-RegularAlternate';
+  src: url("../font/DIN-RegularAlternate.eot?#iefix") format("embedded-opentype"), url("../font/DIN-RegularAlternate.woff") format("woff"), url("../font/DIN-RegularAlternate.ttf") format("truetype"), url("../font/DIN-RegularAlternate.svg#DIN-RegularAlternate") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+.mobile .nav-bar {
+  position: fixed;
+  width: 100%;
+  margin-top: 0; }
+  @media only screen and (max-width: 320px) {
+    .mobile .nav-bar .nav-right {
+      bottom: 0; } }
+@media only screen and (max-width: 320px) {
+  .mobile .popup .popup__content .popup__text-01, .mobile .popup .popup__content .popup__text-03 {
+    font-size: 12px; }
+  .mobile .popup .popup__content .popup__title {
+    margin-bottom: 17px; }
+  .mobile .popup .popup__content .popup__text-01 {
+    margin-bottom: 12px; }
+  .mobile .popup .popup__content .popup__text-02 {
+    margin-bottom: 10px;
+    font-size: 14px; }
+  .mobile .popup .popup__content .popup__text-03 {
+    margin-bottom: 20px; } }
+.mobile .popup .popup__close {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%); }
+  @media only screen and (max-width: 320px) {
+    .mobile .popup .popup__close {
+      bottom: 0; } }
+.mobile .popup.access-popup .popup__content .row {
+  margin-top: -70px; }
+  .mobile .popup.access-popup .popup__content .row .access__text {
+    font-size: 11px; }
+  .mobile .popup.access-popup .popup__content .row .access__text table td {
+    padding-bottom: 0; }
+  @media only screen and (max-width: 320px) {
+    .mobile .popup.access-popup .popup__content .row .popup__title {
+      margin-top: 0; } }
+
+.android .nav-bar h1 {
+  margin-top: 10px; }
+.android .popup .popup__content .row .col-md-6:first-child {
+  margin-bottom: 5px; }
+.android .popup .popup__content .popup__title {
+  margin-bottom: 17px; }
+.android .popup .popup__content .popup__text-01 {
+  margin-bottom: 12px; }
+.android .popup .popup__content .popup__text-02 {
+  margin-bottom: 10px; }
+.android .popup .popup__content .popup__text-03 {
+  margin-bottom: 20px; }
+
+.nav-bar {
+  z-index: 10;
+  position: relative;
+  font-family: "FrutigerNextLT-Light";
+  margin-top: 14px; }
+  .nav-bar h1 {
+    font-size: 24px;
+    padding-left: 20px;
+    display: inline-block;
+    margin: 20px 0 0;
+    font-family: "FrutigerNextLT-Light"; }
+    @media only screen and (max-width: 767px) {
+      .nav-bar h1 {
+        display: block;
+        text-align: center;
+        line-height: 1.5;
+        font-size: 5vw; } }
+  .nav-bar .nav-right {
+    float: right;
+    margin: 16px 0 0 5px; }
+    @media only screen and (max-width: 767px) {
+      .nav-bar .nav-right {
+        position: fixed;
+        bottom: 15px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0;
+        padding: 0 30px;
+        text-align: center;
+        color: #fff; } }
+    .nav-bar .nav-right div {
+      display: inline-block;
+      font-size: 16px;
+      margin-right: 15px;
+      cursor: pointer; }
+      @media only screen and (max-width: 767px) {
+        .nav-bar .nav-right div {
+          width: 50%; } }
+      .nav-bar .nav-right div.message::before {
+        content: url("../img/message.png");
+        padding-right: 5px; }
+        @media only screen and (max-width: 767px) {
+          .nav-bar .nav-right div.message::before {
+            content: url("../img/icon-menu-sp.png"); } }
+      .nav-bar .nav-right div.access::before {
+        content: url("../img/access.png");
+        padding-right: 5px; }
+        @media only screen and (max-width: 767px) {
+          .nav-bar .nav-right div.access::before {
+            content: url("../img/icon-menu-sp.png"); } }
+
+.popup {
+  background-color: rgba(0, 0, 0, 0.85);
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 99;
+  text-align: center;
+  color: #fff;
+  font-family: "NotoSan-Light";
+  display: none; }
+  .popup .popup__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; }
+    @media only screen and (max-width: 800px) {
+      .popup .popup__content {
+        padding: 0 30px; } }
+    @media only screen and (max-width: 767px) {
+      .popup .popup__content {
+        padding: 0 20px; } }
+  .popup .popup__title {
+    font-size: 28px;
+    margin-bottom: 27px; }
+    @media only screen and (max-width: 767px) {
+      .popup .popup__title {
+        font-size: 18px; } }
+  .popup .popup__text-01, .popup .popup__text-03 {
+    font-size: 20px;
+    margin-bottom: 22px; }
+    @media only screen and (max-width: 767px) {
+      .popup .popup__text-01, .popup .popup__text-03 {
+        font-size: 14px; } }
+  .popup .popup__text-02 {
+    font-size: 22px;
+    margin-bottom: 20px; }
+    @media only screen and (max-width: 767px) {
+      .popup .popup__text-02 {
+        font-size: 16px; } }
+  .popup .popup__text-03 {
+    margin-bottom: 35px; }
+    @media only screen and (max-width: 767px) {
+      .popup .popup__text-03 {
+        margin-left: -1px;
+        margin-right: -1px; } }
+  .popup .popup__bottom {
+    font-family: "FrutigerNextLT-Light";
+    font-size: 18px;
+    margin-bottom: 45px; }
+    @media only screen and (max-width: 767px) {
+      .popup .popup__bottom {
+        font-size: 12px; } }
+  .popup .popup__close {
+    cursor: pointer;
+    font-family: "FrutigerNextLT-Light";
+    font-size: 20px;
+    display: inline-block; }
+    @media only screen and (max-width: 767px) {
+      .popup .popup__close {
+        font-size: 12px; }
+        .popup .popup__close img {
+          margin-bottom: -5px;
+          display: block; } }
+  .popup #map {
+    width: 100%;
+    max-width: 480px;
+    height: 300px;
+    margin: auto; }
+    @media only screen and (max-width: 767px) {
+      .popup #map {
+        height: 250px; } }
+    @media only screen and (max-width: 320px) {
+      .popup #map {
+        height: 200px; } }
+  .popup.access-popup .popup__content {
+    width: 1000px;
+    margin: auto;
+    flex-direction: row;
+    text-align: left; }
+    @media only screen and (max-width: 800px) {
+      .popup.access-popup .popup__content {
+        width: 100%; } }
+    .popup.access-popup .popup__content .row {
+      width: 100%;
+      margin-top: 48px; }
+      .popup.access-popup .popup__content .row .col-md-6:first-child {
+        padding: 0; }
+        @media only screen and (max-width: 800px) {
+          .popup.access-popup .popup__content .row .col-md-6:first-child {
+            text-align: center;
+            margin-bottom: 20px; } }
+        @media only screen and (max-width: 767px) {
+          .popup.access-popup .popup__content .row .col-md-6:first-child img {
+            max-width: 100%; } }
+      .popup.access-popup .popup__content .row .col-md-12 {
+        text-align: center; }
+    .popup.access-popup .popup__content .popup__close__wrap {
+      clear: both;
+      text-align: center; }
+  .popup.access-popup .popup__close {
+    margin-top: 60px; }
+    @media only screen and (max-width: 767px) {
+      .popup.access-popup .popup__close {
+        margin-top: 20px; } }
+  .popup.access-popup .access__text {
+    font-size: 18px;
+    padding-left: 30px;
+    padding-right: 0; }
+    @media only screen and (max-width: 800px) {
+      .popup.access-popup .access__text {
+        display: flex;
+        flex-direction: column;
+        align-items: center; } }
+    @media only screen and (max-width: 767px) {
+      .popup.access-popup .access__text {
+        align-items: flex-start;
+        padding-left: 0;
+        font-size: 13px; } }
+    .popup.access-popup .access__text img {
+      max-width: 100%; }
+    .popup.access-popup .access__text .popup__title {
+      font-family: "FrutigerNextLT-Light";
+      font-size: 38px;
+      margin-top: 3px;
+      margin-bottom: 4px; }
+      @media only screen and (max-width: 767px) {
+        .popup.access-popup .access__text .popup__title {
+          font-size: 24px; } }
+    .popup.access-popup .access__text table td {
+      vertical-align: top;
+      line-height: 1.7;
+      padding-bottom: 11px; }
+      .popup.access-popup .access__text table td a {
+        color: #fff;
+        text-decoration: none; }
+        .popup.access-popup .access__text table td a:hover {
+          opacity: .8; }
+      .popup.access-popup .access__text table td:first-child {
+        white-space: nowrap; }
+
+/*# sourceMappingURL=common.css.map */

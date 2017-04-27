@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'FrutigerNextLT-Light';
+  src: url("../font/FrutigerNextLT-Light.eot?#iefix") format("embedded-opentype"), url("../font/FrutigerNextLT-Light.woff") format("woff"), url("../font/FrutigerNextLT-Light.ttf") format("truetype"), url("../font/FrutigerNextLT-Light.svg#FrutigerNextLT-Light") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'NotoSan-Light';
+  src: url("../font/NotoSansCJKjp-Light.eot?#iefix") format("embedded-opentype"), url("../font/NotoSansCJKjp-Light.woff") format("woff"), url("../font/NotoSansCJKjp-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'NotoSan-Medium';
+  src: url("../font/NotoSansCJKjp-Medium.eot?#iefix") format("embedded-opentype"), url("../font/NotoSansCJKjp-Medium.woff") format("woff"), url("../font/NotoSansCJKjp-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'DIN-RegularAlternate';
+  src: url("../font/DIN-RegularAlternate.eot?#iefix") format("embedded-opentype"), url("../font/DIN-RegularAlternate.woff") format("woff"), url("../font/DIN-RegularAlternate.ttf") format("truetype"), url("../font/DIN-RegularAlternate.svg#DIN-RegularAlternate") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/*# sourceMappingURL=detail.css.map */

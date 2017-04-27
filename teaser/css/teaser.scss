@@ -202,19 +202,19 @@ html, body{
           width: 50%;
         }
         &.message::before{
-          content: url("../../img/message.png");
+          content: url("../../common/img/message.png");
           //vertical-align: middle;
           padding-right: 5px;
           @media #{$info-phone} {
-            content: url("../../img/icon-menu-sp.png");
+            content: url("../../common/img/icon-menu-sp.png");
           }
         }
         &.access::before{
-          content: url("../../img/access.png");
+          content: url("../../common/img/access.png");
           //vertical-align: middle;
           padding-right: 5px;
           @media #{$info-phone} {
-            content: url("../../img/icon-menu-sp.png");
+            content: url("../../common/img/icon-menu-sp.png");
           }
         }
       }

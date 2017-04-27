@@ -129,17 +129,17 @@ html, body {
           html .nav-bar .nav-right div, body .nav-bar .nav-right div {
             width: 50%; } }
         html .nav-bar .nav-right div.message::before, body .nav-bar .nav-right div.message::before {
-          content: url("../../img/message.png");
+          content: url("../../common/img/message.png");
           padding-right: 5px; }
           @media only screen and (max-width: 767px) {
             html .nav-bar .nav-right div.message::before, body .nav-bar .nav-right div.message::before {
-              content: url("../../img/icon-menu-sp.png"); } }
+              content: url("../../common/img/icon-menu-sp.png"); } }
         html .nav-bar .nav-right div.access::before, body .nav-bar .nav-right div.access::before {
-          content: url("../../img/access.png");
+          content: url("../../common/img/access.png");
           padding-right: 5px; }
           @media only screen and (max-width: 767px) {
             html .nav-bar .nav-right div.access::before, body .nav-bar .nav-right div.access::before {
-              content: url("../../img/icon-menu-sp.png"); } }
+              content: url("../../common/img/icon-menu-sp.png"); } }
   html .content, html .content-front, body .content, body .content-front {
     z-index: 1;
     height: 100%;
