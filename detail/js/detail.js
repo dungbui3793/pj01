@@ -49,7 +49,24 @@ $(function () {
 
     });
 
-    $('.slide-right').bind('mousewheel', function(e){
+    var scrollPosition = 0;
+    var x = 0;
+
+    function initScrollAnimation () {
+        x = 0;
+        if( scrollPosition > 0 ) {
+            console.log("up");
+        } else {
+            console.log("down");
+        }
+    }
+
+
+    var isMoving=false;
+
+    $('.slide-right').bind("mousewheel DOMMouseScroll MozMousePixelScroll", function(event, delta) {
+        event.preventDefault();
+
         var get_this_slide = $(this);
         var get_this_current_slide = get_this_slide.find(".slide__item.active");
         var get_next = get_this_current_slide.next();
@@ -60,39 +77,46 @@ $(function () {
         var get_dot_next = get_current_dot.next();
         var get_dot_prev = get_current_dot.prev();
 
-        clearTimeout(timerId);
-        timerId = setTimeout(function(){
-            if(e.originalEvent.wheelDelta /120 > 0) {
-                console.log("up");
-                if(!get_this_current_slide.is(':first-child')) {
-                    get_prev.removeClass("active next prev").addClass("prev");
-                    get_this_current_slide.removeClass("active next prev").addClass("next");
-                    setTimeout(function () {
-                        get_prev.removeClass("active next prev").addClass("active");
-                        get_prev.find(".slide__item__title").addClass("fadeInUp");
-                    },300);
-                    get_current_dot.removeClass("active");
-                    get_dot_prev.addClass("active");
-                }
-            }
-            else{
-                console.log("down");
-                if(!get_this_current_slide.is(':last-child')) {
-                    get_next.removeClass("active next prev").addClass("next");
-                    get_this_current_slide.removeClass("active next prev").addClass("prev");
-                    setTimeout(function () {
-                        get_next.removeClass("active next prev").addClass("active");
-                        get_next.find(".slide__item__title").addClass("fadeInUp");
-                    },300);
-                    get_current_dot.removeClass("active");
-                    get_dot_next.addClass("active");
-                }
 
+
+        if (isMoving) return;
+        navigateTo();
+
+        var scrollPosition = event.originalEvent.wheelDelta;
+
+        if(scrollPosition > 0) {
+            if (!get_this_current_slide.is(':first-child')) {
+                get_prev.removeClass("active next prev").addClass("prev");
+                get_this_current_slide.removeClass("active next prev").addClass("next");
+                setTimeout(function () {
+                    get_prev.removeClass("active next prev").addClass("active");
+                    get_prev.find(".slide__item__title").addClass("fadeInUp");
+                }, 300);
+                get_current_dot.removeClass("active");
+                get_dot_prev.addClass("active");
             }
-        }, 100);
+        } else {
+            if (!get_this_current_slide.is(':last-child')) {
+                get_next.removeClass("active next prev").addClass("next");
+                get_this_current_slide.removeClass("active next prev").addClass("prev");
+                setTimeout(function () {
+                    get_next.removeClass("active next prev").addClass("active");
+                    get_next.find(".slide__item__title").addClass("fadeInUp");
+                }, 300);
+                get_current_dot.removeClass("active");
+                get_dot_next.addClass("active");
+            }
+        }
 
 
     });
+
+    function navigateTo(){
+        isMoving = true;
+        setTimeout(function() {
+            isMoving=false;
+        },2000);
+    }
 
 });
 
@@ -102,7 +126,6 @@ function add_wow_class () {
     $(".content__item.active .item__info h3").addClass("fadeInUp");
     $(".content__item.active .item__info .item__text-01").addClass("fadeInUp");
     $(".content__item.active .item__info .item__text-02").addClass("fadeInUp");
-    $(".content__item.active .slide-right .slide__item.active .slide__item__title").addClass("fadeInUp");
 }
 
 function add_wow_delay () {
@@ -111,5 +134,4 @@ function add_wow_delay () {
     $(".content__item.active .item__info h3").attr("data-wow-delay","2.3s");
     $(".content__item.active .item__info .item__text-01").attr("data-wow-delay","2.6s");
     $(".content__item.active .item__info .item__text-02").attr("data-wow-delay","2.9s");
-    $(".content__item.active .slide-right .slide__item.active .slide__item__title").attr("data-wow-delay","2s");
 }

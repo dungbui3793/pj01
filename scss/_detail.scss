@@ -151,6 +151,12 @@ $hear-me: #60c4db;
         &.active {
           opacity: 1;
           transform: matrix(1, 0, 0, 1, 0, 0);
+          .slide__item__title {
+            -webkit-animation-name: fadeInUpA;
+            animation-name: fadeInUpA;
+            animation-delay: 1s;
+            @include animation_setting;
+          }
         }
         &.prev {
           transform: matrix(1, 0, 0, 1, 0, -50);
@@ -164,6 +170,9 @@ $hear-me: #60c4db;
           position: absolute;
           top: 12.3%;
           left: 45px;
+          @include css3-prefix(transform, translateY(20px));
+          transition: 1s;
+          opacity: 0;
           .item__title-01 {
             display: inline-block;
             vertical-align: top;
@@ -338,11 +347,8 @@ $hear-me: #60c4db;
     }
     &.detail-link-world {
       .col-left {
-        background-image: url("../img/detail-link-bg-left.png");
+        background: url("../img/detail-link-bg-left.png") no-repeat bottom left #daddea;
       }
-      //.col-right {
-      //  background-image: url("../img/detail-link-bg-right");
-      //}
     }
   }
 }
@@ -424,5 +430,35 @@ $hear-me: #60c4db;
   100% {
     opacity: 0;
     @include css3-prefix(transform, scale(3));
+  }
+}
+
+@-webkit-keyframes fadeInUpA {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUpA {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
   }
 }
