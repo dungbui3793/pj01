@@ -34,8 +34,6 @@ $(function () {
         var getNextLoader = getCurrentLoader.next();
         var getPrevLoader = getCurrentLoader.prev();
 
-
-
         var scrollPosition = event.originalEvent.wheelDelta;
         if(scrollPosition > 0) {
             if(!get_current_page.is(":first-child")) {
@@ -49,8 +47,6 @@ $(function () {
                     get_current_page.removeClass("active");
                     get_prev_page.addClass("active");
                 },2000);
-
-
             }
         } else {
             if(!get_current_page.is(":last-child")) {
@@ -65,12 +61,8 @@ $(function () {
                     get_current_page.removeClass("active");
                     get_next_page.addClass("active");
                 },2000);
-
             }
-
-
         }
-
         function settingNextScrollPage() {
             $(".loader-wrap").removeClass("active").addClass("next-active");
 
@@ -83,12 +75,7 @@ $(function () {
             setTimeout(function () {
                 $(".main-content").addClass("active").removeClass("move-down");
             }, 4000);
-
         }
-
-
-
-
     });
     function navigateTo_2(){
         isMoving_2 = true;
@@ -98,6 +85,44 @@ $(function () {
     }
     // ====================
 
+    $(".content__wrap").on('click','.content__item.active .slider-dot > li',function () {
+        if(!$(this).hasClass("active")) {
+
+            var getCurrentLoader = $(".loader-content .loader-wrap.active-loader");
+
+            var getIndex = $(this).parent(".slider-dot").find("> li").index($(this));
+
+            var getCurrentPage = $(".content__wrap .content__item.active");
+            var getCurrentLoader = $(".loader-content .loader-wrap.active-loader");
+
+
+            var getIndexPage = $(".content__wrap .content__item").eq(getIndex);
+            var getIndexLoader = $(".loader-content .loader-wrap").eq(getIndex);
+            
+            $(".loader-wrap").removeClass("active").addClass("next-active");
+
+            $(".main-content").removeClass("active").addClass("move-down");
+
+            setTimeout(function () {
+                $(".loader-wrap").addClass("active");
+            },500);
+
+            setTimeout(function () {
+                $(".main-content").addClass("active").removeClass("move-down");
+            }, 4000);
+
+
+            getCurrentLoader.removeClass("active-loader");
+            getIndexLoader.addClass("active-loader");
+
+            setTimeout(function () {
+                getCurrentPage.removeClass("active");
+                getIndexPage.addClass("active");
+            },2000);
+
+
+        }
+    })
 
 
     // ====================
@@ -181,7 +206,6 @@ $(function () {
        // console.log(getThisCurrentSlide.attr("class"));
 
        var getThisCurrentSlideItem = $(this).parents(".content__item.active").find(".slide-right .slide__item");
-       console.log(getThisCurrentSlideItem.eq(getIndex).attr("class"));
 
         if(getCurrentDot != getIndex) {
             getThisCurrentSlide.removeClass("active prev next");
@@ -189,43 +213,12 @@ $(function () {
                 getThisCurrentSlideItem.eq(getIndex).removeClass("active next prev").addClass("active");
             },300);
         }
-        
         if(getCurrentDot < getIndex) {
             getThisCurrentSlideItem.eq(getCurrentDot).addClass("prev");
         } else {
             getThisCurrentSlideItem.eq(getCurrentDot).addClass("next");
         }
-
-
-
     });
-
-    // $(".slider-dot .link-world ul li").click(function () {
-    //     var get_current_dot = $(".slider-dot .link-world ul li").index($(".slider-dot .link-world ul li.active"));
-    //     $(this).addClass("active");
-    //     $(".slider-dot .link-world ul li").not($(this)).removeClass("active");
-    //
-    //     var get_index = $(".slider-dot .link-world ul li").index($(this));
-    //
-    //     var get_this_current_slide = $(".slide-right").find(".slide__item.active");
-    //     var get_next = get_this_current_slide.next();
-    //     var get_prev = get_this_current_slide.prev();
-    //
-    //     get_this_current_slide.removeClass("active prev next");
-    //
-    //     // $(".slide-right .slide__item").eq(get_index).addClass("active");
-    //
-    //     if(get_current_dot < get_index) {
-    //         $(".slide-right .slide__item").eq(get_current_dot).addClass("prev");
-    //     } else {
-    //         $(".slide-right .slide__item").eq(get_current_dot).addClass("next");
-    //     }
-    //     setTimeout(function () {
-    //         $(".slide-right .slide__item").eq(get_index).removeClass("active next prev").addClass("active");
-    //     },300);
-    //
-    // });
-    // ====================
 
 
 });
