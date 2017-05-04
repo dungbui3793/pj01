@@ -41,7 +41,10 @@ h1, h2, h3, p {
   left: 0;
   overflow: hidden;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  display: none; }
+  .loader-wrap.active-loader {
+    display: block; }
   .loader-wrap.active .loader-front {
     -webkit-animation-name: load-slide-down;
     animation-name: load-slide-down;
@@ -63,6 +66,8 @@ h1, h2, h3, p {
     -webkit-animation-delay: 2s;
     /* Safari 4.0 - 8.0 */
     animation-delay: 2s; }
+  .loader-wrap.next-active .loader-front {
+    display: none; }
   .loader-wrap .loader {
     position: absolute;
     z-index: 1;
@@ -92,21 +97,47 @@ h1, h2, h3, p {
       bottom: 0;
       left: 0;
       z-index: 4;
-      background-color: #daddea; }
+      background-color: #daddea;
+      transform: translateY(100%); }
   .loader-wrap.link-world .loader {
     background-color: #ea522e; }
+  .loader-wrap.hear-me .loader {
+    background-color: #60c4db; }
 
 .main-content {
   height: 100%;
   background-color: #fff;
   position: relative;
-  z-index: 9;
   -webkit-transform: translateY(100%);
   -khtml-transform: translateY(100%);
   -moz-transform: translateY(100%);
   -ms-transform: translateY(100%);
   -o-transform: translateY(100%);
-  transform: translateY(100%); }
+  transform: translateY(100%);
+  overflow: hidden; }
+  .main-content.move-down {
+    -webkit-animation-name: load-slide-down;
+    animation-name: load-slide-down;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    -webkit-animation-duration: 1.2s;
+    animation-duration: 1.2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    z-index: 3; }
+    .main-content.move-down .nav-bar {
+      opacity: 1; }
+    .main-content.move-down .content__item.active {
+      opacity: 1;
+      display: block;
+      -webkit-transform: translateY(0);
+      -khtml-transform: translateY(0);
+      -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+      -o-transform: translateY(0);
+      transform: translateY(0); }
+      .main-content.move-down .content__item.active .item__info h1, .main-content.move-down .content__item.active .item__info h3, .main-content.move-down .content__item.active .item__info .item__text-01, .main-content.move-down .content__item.active .item__info .item__text-02 {
+        opacity: 1; }
   .main-content.active {
     -webkit-animation-name: load-slide-up;
     animation-name: load-slide-up;
@@ -115,7 +146,30 @@ h1, h2, h3, p {
     -webkit-animation-duration: 1.2s;
     animation-duration: 1.2s;
     -webkit-animation-fill-mode: both;
-    animation-fill-mode: both; }
+    animation-fill-mode: both;
+    z-index: 9; }
+    .main-content.active .nav-bar {
+      -webkit-animation-name: fadeInUpA;
+      animation-name: fadeInUpA;
+      animation-delay: 1.5s;
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+      -webkit-animation-duration: 1.2s;
+      animation-duration: 1.2s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both; }
+    .main-content.active .content__item {
+      -webkit-animation-name: load-slide-up;
+      animation-name: load-slide-up;
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+      -webkit-animation-duration: 1.2s;
+      animation-duration: 1.2s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+      -webkit-animation-delay: 0.3s;
+      /* Safari 4.0 - 8.0 */
+      animation-delay: 0.3s; }
   .main-content .content__item {
     -webkit-transform: translateY(100%);
     -khtml-transform: translateY(100%);
@@ -123,24 +177,61 @@ h1, h2, h3, p {
     -ms-transform: translateY(100%);
     -o-transform: translateY(100%);
     transform: translateY(100%);
-    -webkit-animation-name: load-slide-up;
-    animation-name: load-slide-up;
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-    -webkit-animation-duration: 1.2s;
-    animation-duration: 1.2s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-delay: 4.5s;
-    /* Safari 4.0 - 8.0 */
-    animation-delay: 4.5s;
     display: none; }
     .main-content .content__item.active {
       display: block; }
+      .main-content .content__item.active .item__info h1 {
+        -webkit-animation-name: fadeInUpA;
+        animation-name: fadeInUpA;
+        animation-delay: 4s;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        -webkit-animation-duration: 1.2s;
+        animation-duration: 1.2s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both; }
+      .main-content .content__item.active .item__info h3 {
+        -webkit-animation-name: fadeInUpA;
+        animation-name: fadeInUpA;
+        animation-delay: 4.3s;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        -webkit-animation-duration: 1.2s;
+        animation-duration: 1.2s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both; }
+      .main-content .content__item.active .item__info .item__text-01 {
+        -webkit-animation-name: fadeInUpA;
+        animation-name: fadeInUpA;
+        animation-delay: 4.6s;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        -webkit-animation-duration: 1.2s;
+        animation-duration: 1.2s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both; }
+      .main-content .content__item.active .item__info .item__text-02 {
+        -webkit-animation-name: fadeInUpA;
+        animation-name: fadeInUpA;
+        animation-delay: 4.9s;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        -webkit-animation-duration: 1.2s;
+        animation-duration: 1.2s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both; }
   .main-content .nav-bar {
     margin-top: 0;
     position: fixed;
-    width: 100%; }
+    width: 100%;
+    -webkit-transform: translateY(20px);
+    -khtml-transform: translateY(20px);
+    -moz-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    -o-transform: translateY(20px);
+    transform: translateY(20px);
+    opacity: 0;
+    transition: 1s; }
 
 .content__wrap {
   height: 100%; }
@@ -152,7 +243,8 @@ h1, h2, h3, p {
       float: left;
       background-position: bottom left;
       background-repeat: no-repeat;
-      position: relative; }
+      position: relative;
+      background-color: #daddea; }
     .content__wrap .content__item .col-right {
       height: 100%;
       width: 50%;
@@ -161,7 +253,8 @@ h1, h2, h3, p {
       background-position: center center; }
     .content__wrap .content__item .slide-right {
       position: relative;
-      background-color: #000; }
+      background-color: #000;
+      overflow: hidden; }
       .content__wrap .content__item .slide-right .slide__item {
         top: -40px;
         bottom: -40px;
@@ -333,22 +426,73 @@ h1, h2, h3, p {
         font-family: "FrutigerNextLT-Light";
         font-size: 90px;
         line-height: 0.88;
-        margin-bottom: 8px; }
+        margin-bottom: 8px;
+        -webkit-transform: translateY(20px);
+        -khtml-transform: translateY(20px);
+        -moz-transform: translateY(20px);
+        -ms-transform: translateY(20px);
+        -o-transform: translateY(20px);
+        transform: translateY(20px);
+        transition: 1s;
+        opacity: 0; }
         .content__wrap .content__item .item__info h1 span {
           color: #ea522e; }
       .content__wrap .content__item .item__info h3 {
         font-weight: normal;
         font-size: 20px;
-        margin-bottom: 43px; }
+        margin-bottom: 43px;
+        -webkit-transform: translateY(20px);
+        -khtml-transform: translateY(20px);
+        -moz-transform: translateY(20px);
+        -ms-transform: translateY(20px);
+        -o-transform: translateY(20px);
+        transform: translateY(20px);
+        transition: 1s;
+        opacity: 0; }
       .content__wrap .content__item .item__info .item__text-01 {
         font-size: 18px;
         line-height: 1.9;
-        margin-bottom: 25px; }
+        margin-bottom: 25px;
+        -webkit-transform: translateY(20px);
+        -khtml-transform: translateY(20px);
+        -moz-transform: translateY(20px);
+        -ms-transform: translateY(20px);
+        -o-transform: translateY(20px);
+        transform: translateY(20px);
+        transition: 1s;
+        opacity: 0; }
       .content__wrap .content__item .item__info .item__text-02 {
         font-size: 14px;
-        line-height: 1.8; }
+        line-height: 1.8;
+        -webkit-transform: translateY(20px);
+        -khtml-transform: translateY(20px);
+        -moz-transform: translateY(20px);
+        -ms-transform: translateY(20px);
+        -o-transform: translateY(20px);
+        transform: translateY(20px);
+        transition: 1s;
+        opacity: 0; }
     .content__wrap .content__item.detail-link-world .col-left {
-      background: url("../img/detail-link-bg-left.png") no-repeat bottom left #daddea; }
+      background: url("../img/detail-link-bg-left.png") no-repeat -15px calc(100% + 15px) #daddea; }
+    .content__wrap .content__item.detail-link-world .slide__item__title.slide__item__title-01 {
+      right: 30px;
+      left: initial;
+      top: 16.3%; }
+      .content__wrap .content__item.detail-link-world .slide__item__title.slide__item__title-01 .item__title-03 {
+        width: 220px;
+        margin-right: -10px; }
+    .content__wrap .content__item.detail-link-world .slide__item__title.slide__item__title-02 {
+      bottom: 120px;
+      top: initial;
+      left: 42px; }
+      .content__wrap .content__item.detail-link-world .slide__item__title.slide__item__title-02 .item__title-03 {
+        width: 215px; }
+    .content__wrap .content__item.detail-link-world .slide__item__title.slide__item__title-03 {
+      bottom: 120px;
+      top: initial;
+      left: 42px; }
+      .content__wrap .content__item.detail-link-world .slide__item__title.slide__item__title-03 .item__title-03 {
+        width: 195px; }
 
 @-webkit-keyframes load-slide-down {
   0% {

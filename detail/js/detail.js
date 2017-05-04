@@ -12,58 +12,95 @@ $(function () {
 
     setTimeout(function () {
         $(".main-content").addClass("active");
-        add_wow_class();
-
     }, 4000);
-    add_wow_delay();
+    setTimeout(function () {
+        $(".content__wrap .content__item:first-child").addClass("active");
+    }, 2000);
 
 
+    // ====================
+    // setting scroll single slide right
+    // ====================
+    var isMoving_2=false;
+
+    $(".col-left").bind("mousewheel DOMMouseScroll MozMousePixelScroll", function (event, delta) {
+        event.preventDefault();
+
+        var get_current_page = $(".content__wrap .content__item.active");
+        var get_next_page = get_current_page.next();
+        var get_prev_page = get_current_page.prev();
+
+        var getCurrentLoader = $(".loader-content .loader-wrap.active-loader");
+        var getNextLoader = getCurrentLoader.next();
+        var getPrevLoader = getCurrentLoader.prev();
 
 
-    var timerId;
-
-    $(".slider-dot .link-world ul li").click(function () {
-        var get_current_dot = $(".slider-dot .link-world ul li").index($(".slider-dot .link-world ul li.active"));
-        $(this).addClass("active");
-        $(".slider-dot .link-world ul li").not($(this)).removeClass("active");
-
-        var get_index = $(".slider-dot .link-world ul li").index($(this));
-
-        var get_this_current_slide = $(".slide-right").find(".slide__item.active");
-        var get_next = get_this_current_slide.next();
-        var get_prev = get_this_current_slide.prev();
-
-        get_this_current_slide.removeClass("active prev next");
-
-        // $(".slide-right .slide__item").eq(get_index).addClass("active");
-
-        if(get_current_dot < get_index) {
-            $(".slide-right .slide__item").eq(get_current_dot).addClass("prev");
-        } else {
-            $(".slide-right .slide__item").eq(get_current_dot).addClass("next");
-
-        }
-        setTimeout(function () {
-            $(".slide-right .slide__item").eq(get_index).removeClass("active next prev").addClass("active");
-        },300);
-
-    });
-
-    var scrollPosition = 0;
-    var x = 0;
-
-    function initScrollAnimation () {
-        x = 0;
-        if( scrollPosition > 0 ) {
+        if (isMoving_2) return;
+        navigateTo_2();
+        var scrollPosition = event.originalEvent.wheelDelta;
+        if(scrollPosition > 0) {
             console.log("up");
+            if(!get_current_page.is(":first-child")) {
+                settingNextScrollPage();
+                getCurrentLoader.removeClass("active-loader");
+                getPrevLoader.addClass("active-loader");
+                setTimeout(function () {
+                    get_current_page.removeClass("active");
+                    get_prev_page.addClass("active");
+                },2000);
+
+
+            }
         } else {
             console.log("down");
+            if(!get_current_page.is(":last-child")) {
+                settingNextScrollPage();
+                getCurrentLoader.removeClass("active-loader");
+                getNextLoader.addClass("active-loader");
+
+                setTimeout(function () {
+                    get_current_page.removeClass("active");
+                    get_next_page.addClass("active");
+                },2000);
+
+            }
+
+
         }
+
+        function settingNextScrollPage() {
+            $(".loader-wrap").removeClass("active").addClass("next-active");
+
+            $(".main-content").removeClass("active").addClass("move-down");
+
+            setTimeout(function () {
+                $(".loader-wrap").addClass("active");
+            },500);
+
+            setTimeout(function () {
+                $(".main-content").addClass("active").removeClass("move-down");
+            }, 4000);
+
+        }
+
+
+
+
+    });
+    function navigateTo_2(){
+        isMoving_2 = true;
+        setTimeout(function() {
+            isMoving_2=false;
+        },5000);
     }
+    // ====================
 
 
+
+    // ====================
+    // setting scroll single slide right
+    // ====================
     var isMoving=false;
-
     $('.slide-right').bind("mousewheel DOMMouseScroll MozMousePixelScroll", function(event, delta) {
         event.preventDefault();
 
@@ -72,7 +109,8 @@ $(function () {
         var get_next = get_this_current_slide.next();
         var get_prev = get_this_current_slide.prev();
 
-        var get_dot = $(".slider-dot .link-world");
+        var get_dot = get_this_slide.parent(".content__item").find(".col-left .slider-dot > li.active");
+        // var get_dot = $(".slider-dot > li.active");
         var get_current_dot = get_dot.find("ul li.active");
         var get_dot_next = get_current_dot.next();
         var get_dot_prev = get_current_dot.prev();
@@ -117,21 +155,39 @@ $(function () {
             isMoving=false;
         },2000);
     }
+    // ====================
+
+
+    // ====================
+    // setting dot single slide right
+    // ====================
+    $(".slider-dot .link-world ul li").click(function () {
+        var get_current_dot = $(".slider-dot .link-world ul li").index($(".slider-dot .link-world ul li.active"));
+        $(this).addClass("active");
+        $(".slider-dot .link-world ul li").not($(this)).removeClass("active");
+
+        var get_index = $(".slider-dot .link-world ul li").index($(this));
+
+        var get_this_current_slide = $(".slide-right").find(".slide__item.active");
+        var get_next = get_this_current_slide.next();
+        var get_prev = get_this_current_slide.prev();
+
+        get_this_current_slide.removeClass("active prev next");
+
+        // $(".slide-right .slide__item").eq(get_index).addClass("active");
+
+        if(get_current_dot < get_index) {
+            $(".slide-right .slide__item").eq(get_current_dot).addClass("prev");
+        } else {
+            $(".slide-right .slide__item").eq(get_current_dot).addClass("next");
+
+        }
+        setTimeout(function () {
+            $(".slide-right .slide__item").eq(get_index).removeClass("active next prev").addClass("active");
+        },300);
+
+    });
+    // ====================
+
 
 });
-
-function add_wow_class () {
-    $(".nav-bar").addClass("fadeInDown");
-    $(".content__item.active .item__info h1").addClass("fadeInUp");
-    $(".content__item.active .item__info h3").addClass("fadeInUp");
-    $(".content__item.active .item__info .item__text-01").addClass("fadeInUp");
-    $(".content__item.active .item__info .item__text-02").addClass("fadeInUp");
-}
-
-function add_wow_delay () {
-    $(".nav-bar").attr("data-wow-delay","1.5s");
-    $(".content__item.active .item__info h1").attr("data-wow-delay","2s");
-    $(".content__item.active .item__info h3").attr("data-wow-delay","2.3s");
-    $(".content__item.active .item__info .item__text-01").attr("data-wow-delay","2.6s");
-    $(".content__item.active .item__info .item__text-02").attr("data-wow-delay","2.9s");
-}
