@@ -35,12 +35,13 @@ $(function () {
         var getPrevLoader = getCurrentLoader.prev();
 
 
-        if (isMoving_2) return;
-        navigateTo_2();
+
         var scrollPosition = event.originalEvent.wheelDelta;
         if(scrollPosition > 0) {
-            console.log("up");
             if(!get_current_page.is(":first-child")) {
+                if (isMoving_2) return;
+                navigateTo_2();
+                console.log("up");
                 settingNextScrollPage();
                 getCurrentLoader.removeClass("active-loader");
                 getPrevLoader.addClass("active-loader");
@@ -52,8 +53,10 @@ $(function () {
 
             }
         } else {
-            console.log("down");
             if(!get_current_page.is(":last-child")) {
+                if (isMoving_2) return;
+                navigateTo_2();
+                console.log("down");
                 settingNextScrollPage();
                 getCurrentLoader.removeClass("active-loader");
                 getNextLoader.addClass("active-loader");
@@ -117,13 +120,14 @@ $(function () {
 
 
 
-        if (isMoving) return;
-        navigateTo();
-
         var scrollPosition = event.originalEvent.wheelDelta;
 
         if(scrollPosition > 0) {
             if (!get_this_current_slide.is(':first-child')) {
+
+                if (isMoving) return;
+                navigateTo();
+
                 get_prev.removeClass("active next prev").addClass("prev");
                 get_this_current_slide.removeClass("active next prev").addClass("next");
                 setTimeout(function () {
@@ -135,6 +139,10 @@ $(function () {
             }
         } else {
             if (!get_this_current_slide.is(':last-child')) {
+
+                if (isMoving) return;
+                navigateTo();
+
                 get_next.removeClass("active next prev").addClass("next");
                 get_this_current_slide.removeClass("active next prev").addClass("prev");
                 setTimeout(function () {

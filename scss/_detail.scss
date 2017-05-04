@@ -120,7 +120,7 @@ $hear-me: #60c4db;
       display: block;
       @include css3-prefix(transform, translateY(0));
       .item__info {
-        h1, h3, .item__text-01, .item__text-02 {
+        h1, h3, .item__text-01, .item__text-02, > a {
           opacity: 1;
         }
       }
@@ -174,6 +174,12 @@ $hear-me: #60c4db;
           -webkit-animation-name: fadeInUpA;
           animation-name: fadeInUpA;
           animation-delay: 4.9s;
+          @include animation_setting;
+        }
+        > a {
+          -webkit-animation-name: fadeInUpA;
+          animation-name: fadeInUpA;
+          animation-delay: 5.2s;
           @include animation_setting;
         }
       }
@@ -251,6 +257,17 @@ $hear-me: #60c4db;
           @include css3-prefix(transform, translateY(20px));
           transition: 1s;
           opacity: 0;
+          &:before {
+            content: "";
+            width: 550px;
+            height: 550px;
+            background: url("../img/slide-title-light.png");
+            position: absolute;
+            z-index: -1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
           .item__title-01 {
             display: inline-block;
             vertical-align: top;
@@ -295,7 +312,7 @@ $hear-me: #60c4db;
         color: transparent;
         font-family: $font-frutiger-light;
         font-size: 12px;
-        text-transform: uppercase;
+        //text-transform: uppercase;
         cursor: pointer;
         &.active {
           color: $link-world;
@@ -311,6 +328,21 @@ $hear-me: #60c4db;
             border: 1px solid $link-world;
             top: 3px;
             right: -3px;
+          }
+          &.hear-me {
+            color: $hear-me;
+            &:before {
+              background-color: $hear-me;
+            }
+            &:after {
+              border: 1px solid $hear-me;
+            }
+            > ul:before {
+              background-color: $hear-me;
+            }
+            > ul li:before {
+              background-color: $hear-me;
+            }
           }
         }
         &:before {
@@ -387,6 +419,7 @@ $hear-me: #60c4db;
             }
           }
         }
+
       }
     }
     .item__info {
@@ -394,7 +427,7 @@ $hear-me: #60c4db;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      width: 49%;
+      width: 51%;
       margin-left: 9.6%;
       font-family: $font-noto-regular;
       h1 {
@@ -411,11 +444,12 @@ $hear-me: #60c4db;
       }
       h3 {
         font-weight: normal;
-        font-size: 20px;
+        font-size: 19px;
         margin-bottom: 43px;
         @include css3-prefix(transform, translateY(20px));
         transition: 1s;
         opacity: 0;
+        font-family: $font-noto-regular;
       }
       .item__text-01 {
         font-size: 18px;
@@ -428,6 +462,11 @@ $hear-me: #60c4db;
       .item__text-02 {
         font-size: 14px;
         line-height: 1.8;
+        @include css3-prefix(transform, translateY(20px));
+        transition: 1s;
+        opacity: 0;
+      }
+      > a {
         @include css3-prefix(transform, translateY(20px));
         transition: 1s;
         opacity: 0;
@@ -466,6 +505,55 @@ $hear-me: #60c4db;
           }
         }
 
+      }
+      .slide__item {
+        &.slide__item-01 {
+          background-position: 70% center;
+        }
+      }
+
+    }
+
+    &.detail-hear-me {
+      .item__info {
+        span {
+          color: $hear-me;
+        }
+        > a {
+          margin-top: 5px;
+        }
+      }
+      .col-left {
+        background: url("../img/detail-hear-bg-left.png") no-repeat left calc(100% - 90px) #daddea;
+      }
+      .slide__item__title {
+        &.slide__item__title-01 {
+          top: 160px;
+          .item__title-03 {
+            width: 325px;
+          }
+        }
+        &.slide__item__title-02 {
+          top: initial;
+          bottom: 120px;
+          .item__title-03 {
+            width: 220px;
+          }
+        }
+        &.slide__item__title-01 {
+          top: 140px;
+          .item__title-03 {
+            width: 270px;
+          }
+        }
+      }
+      .slide__item {
+        &.slide__item-02 {
+          background-position: 70% center;
+        }
+        &.slide__item-03 {
+          background-position: 82% center;
+        }
       }
     }
   }
