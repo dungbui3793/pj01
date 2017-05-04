@@ -15,6 +15,7 @@ h1, h2, h3, p {
 
 $link-world: #ea522e;
 $hear-me: #60c4db;
+$ar-phabet: #df606d;
 
 $interactive: #f5c822;
 $ar: #df606d;
@@ -97,6 +98,11 @@ $hear-me: #60c4db;
   &.hear-me {
     .loader {
       background-color: $hear-me;
+    }
+  }
+  &.ar-phabet {
+    .loader {
+      background-color: $ar-phabet;
     }
   }
 }
@@ -331,19 +337,28 @@ $hear-me: #60c4db;
           }
           &.hear-me {
             color: $hear-me;
-            &:before {
+            &:before,
+            > ul:before,
+            > ul li:before {
               background-color: $hear-me;
             }
             &:after {
               border: 1px solid $hear-me;
             }
-            > ul:before {
-              background-color: $hear-me;
-            }
+          }
+
+          &.ar-phabet {
+            color: $ar-phabet;
+            &:before,
+            > ul:before,
             > ul li:before {
-              background-color: $hear-me;
+              background-color: $ar-phabet;
+            }
+            &:after {
+              border: 1px solid $ar-phabet;
             }
           }
+
         }
         &:before {
           content: "";
@@ -427,7 +442,7 @@ $hear-me: #60c4db;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      width: 51%;
+      width: 360px;
       margin-left: 9.6%;
       font-family: $font-noto-regular;
       h1 {
@@ -438,6 +453,7 @@ $hear-me: #60c4db;
         @include css3-prefix(transform, translateY(20px));
         transition: 1s;
         opacity: 0;
+        margin-right: -150px;
         span {
           color: $link-world;
         }
@@ -450,6 +466,11 @@ $hear-me: #60c4db;
         transition: 1s;
         opacity: 0;
         font-family: $font-noto-regular;
+        small {
+          display: block;
+          color: #5d5e61;
+          margin: 5px 0 12px;
+        }
       }
       .item__text-01 {
         font-size: 18px;
@@ -540,7 +561,7 @@ $hear-me: #60c4db;
             width: 220px;
           }
         }
-        &.slide__item__title-01 {
+        &.slide__item__title-03 {
           top: 140px;
           .item__title-03 {
             width: 270px;
@@ -553,6 +574,51 @@ $hear-me: #60c4db;
         }
         &.slide__item-03 {
           background-position: 82% center;
+        }
+      }
+    }
+
+    &.detail-ar-phabet {
+      .item__info {
+        span {
+          color: $ar-phabet;
+        }
+      }
+      .col-left {
+        background: url("../img/detail-ar-bg-left.png") no-repeat -36px calc(100% + 54px) #daddea;
+      }
+      .slide__item__title {
+        &.slide__item__title-01 {
+          bottom: 120px;
+          top: initial;
+          .item__title-03 {
+            width: 225px;
+          }
+        }
+        &.slide__item__title-02 {
+          top: initial;
+          bottom: 120px;
+          .item__title-03 {
+            width: 265px;
+          }
+        }
+        &.slide__item__title-03 {
+          top: initial;
+          bottom: 120px;
+          .item__title-03 {
+            width: 260px;
+          }
+        }
+      }
+      .slide__item {
+        &.slide__item-01 {
+          background-position: 12% center;
+        }
+        &.slide__item-02 {
+          background-position: 30% center;
+        }
+        &.slide__item-03 {
+          background-position: 19% center;
         }
       }
     }
