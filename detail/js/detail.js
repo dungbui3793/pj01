@@ -169,32 +169,62 @@ $(function () {
     // ====================
     // setting dot single slide right
     // ====================
-    $(".slider-dot .link-world ul li").click(function () {
-        var get_current_dot = $(".slider-dot .link-world ul li").index($(".slider-dot .link-world ul li.active"));
+
+    $(".content__wrap").on('click','.content__item.active .slider-dot > li.active ul li',function () {
+        var getCurrentDot = $(this).parents("li.active").find("ul li").index($(this).parents("li.active").find("ul li.active"));
         $(this).addClass("active");
-        $(".slider-dot .link-world ul li").not($(this)).removeClass("active");
+        $(this).parents("li.active").find("ul li").not($(this)).removeClass("active");
 
-        var get_index = $(".slider-dot .link-world ul li").index($(this));
+       var getIndex = $(this).parents("li.active").find("ul li").index($(this));
 
-        var get_this_current_slide = $(".slide-right").find(".slide__item.active");
-        var get_next = get_this_current_slide.next();
-        var get_prev = get_this_current_slide.prev();
+       var getThisCurrentSlide = $(this).parents(".content__item.active").find(".slide-right .slide__item.active");
+       // console.log(getThisCurrentSlide.attr("class"));
 
-        get_this_current_slide.removeClass("active prev next");
+       var getThisCurrentSlideItem = $(this).parents(".content__item.active").find(".slide-right .slide__item");
+       console.log(getThisCurrentSlideItem.eq(getIndex).attr("class"));
 
-        // $(".slide-right .slide__item").eq(get_index).addClass("active");
-
-        if(get_current_dot < get_index) {
-            $(".slide-right .slide__item").eq(get_current_dot).addClass("prev");
-        } else {
-            $(".slide-right .slide__item").eq(get_current_dot).addClass("next");
-
+        if(getCurrentDot != getIndex) {
+            getThisCurrentSlide.removeClass("active prev next");
+            setTimeout(function () {
+                getThisCurrentSlideItem.eq(getIndex).removeClass("active next prev").addClass("active");
+            },300);
         }
-        setTimeout(function () {
-            $(".slide-right .slide__item").eq(get_index).removeClass("active next prev").addClass("active");
-        },300);
+        
+        if(getCurrentDot < getIndex) {
+            getThisCurrentSlideItem.eq(getCurrentDot).addClass("prev");
+        } else {
+            getThisCurrentSlideItem.eq(getCurrentDot).addClass("next");
+        }
+
+
 
     });
+
+    // $(".slider-dot .link-world ul li").click(function () {
+    //     var get_current_dot = $(".slider-dot .link-world ul li").index($(".slider-dot .link-world ul li.active"));
+    //     $(this).addClass("active");
+    //     $(".slider-dot .link-world ul li").not($(this)).removeClass("active");
+    //
+    //     var get_index = $(".slider-dot .link-world ul li").index($(this));
+    //
+    //     var get_this_current_slide = $(".slide-right").find(".slide__item.active");
+    //     var get_next = get_this_current_slide.next();
+    //     var get_prev = get_this_current_slide.prev();
+    //
+    //     get_this_current_slide.removeClass("active prev next");
+    //
+    //     // $(".slide-right .slide__item").eq(get_index).addClass("active");
+    //
+    //     if(get_current_dot < get_index) {
+    //         $(".slide-right .slide__item").eq(get_current_dot).addClass("prev");
+    //     } else {
+    //         $(".slide-right .slide__item").eq(get_current_dot).addClass("next");
+    //     }
+    //     setTimeout(function () {
+    //         $(".slide-right .slide__item").eq(get_index).removeClass("active next prev").addClass("active");
+    //     },300);
+    //
+    // });
     // ====================
 
 

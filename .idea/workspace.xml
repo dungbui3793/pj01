@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9353332e-1e3d-4955-a1c2-050e9c362766" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/detail/css/detail.css" afterPath="$PROJECT_DIR$/detail/css/detail.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/detail/css/detail.css.map" afterPath="$PROJECT_DIR$/detail/css/detail.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/detail/index.html" afterPath="$PROJECT_DIR$/detail/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/detail/js/detail.js" afterPath="$PROJECT_DIR$/detail/js/detail.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/_detail.scss" afterPath="$PROJECT_DIR$/scss/_detail.scss" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -55,10 +50,10 @@
       <file leaf-file-name="detail.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/detail/js/detail.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="96" column="12" lean-forward="false" selection-start-line="96" selection-start-column="12" selection-end-line="96" selection-end-column="12" />
+            <state relative-caret-position="212">
+              <caret line="191" column="8" lean-forward="false" selection-start-line="191" selection-start-column="8" selection-end-line="191" selection-end-column="8" />
               <folding>
-                <element signature="e#5371#6411#0" expanded="false" />
+                <element signature="e#3055#5051#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -95,8 +90,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>content__item-link</find>
-      <find>h1</find>
       <find>wow animated</find>
       <find>fadeInUpA</find>
       <find>col-left</find>
@@ -125,6 +118,8 @@
       <find>slider-</find>
       <find>loader</find>
       <find>slider</find>
+      <find>get_index</find>
+      <find>get_current_dot</find>
     </findStrings>
     <replaceStrings>
       <replace>url('</replace>
@@ -475,12 +470,12 @@
       <workItem from="1493776102908" duration="55000" />
       <workItem from="1493776183127" duration="401000" />
       <workItem from="1493778039544" duration="19815000" />
-      <workItem from="1493862201381" duration="12507000" />
+      <workItem from="1493862201381" duration="15091000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156566000" />
+    <option name="totallyTimeSpent" value="159150000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="976" extended-state="6" />
@@ -868,10 +863,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/detail/js/detail.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="96" column="12" lean-forward="false" selection-start-line="96" selection-start-column="12" selection-end-line="96" selection-end-column="12" />
+        <state relative-caret-position="212">
+          <caret line="191" column="8" lean-forward="false" selection-start-line="191" selection-start-column="8" selection-end-line="191" selection-end-column="8" />
           <folding>
-            <element signature="e#5371#6411#0" expanded="false" />
+            <element signature="e#3055#5051#0" expanded="false" />
           </folding>
         </state>
       </provider>
