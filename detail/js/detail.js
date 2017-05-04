@@ -94,7 +94,7 @@ $(function () {
         isMoving_2 = true;
         setTimeout(function() {
             isMoving_2=false;
-        },5000);
+        },5500);
     }
     // ====================
 
