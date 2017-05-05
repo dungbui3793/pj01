@@ -154,52 +154,15 @@ $(function () {
 
 
     });
-
-    // ====================
-
-    // if($(window).width() < 1160 && $(window).width() > 767 && is_touch_device()) {
-    //
-    //     var get_this_slide = $(this);
-    //     var get_this_current_slide = get_this_slide.find(".slide__item.active");
-    //     var get_next = get_this_current_slide.next();
-    //     var get_prev = get_this_current_slide.prev();
-    //
-    //     var get_dot = get_this_slide.parent(".content__item").find(".col-left .slider-dot > li.active");
-    //     var get_current_dot = get_dot.find("ul li.active");
-    //     var get_dot_next = get_current_dot.next();
-    //     var get_dot_prev = get_current_dot.prev();
-    //
-    //     var ts;
-    //     $(".slide-right").bind('touchstart', function (e){
-    //         ts = e.originalEvent.touches[0].clientY;
-    //     });
-    //
-    //     $(".slide-right").bind('touchend', function (e){
-    //         var te = e.originalEvent.changedTouches[0].clientY;
-    //         if(ts < te-5){
-    //             console.log("up")
-    //
-    //         }else if(ts > te+5){
-    //
-    //             get_next.removeClass("active next prev").addClass("next");
-    //             get_this_current_slide.removeClass("active next prev").addClass("prev");
-    //             setTimeout(function () {
-    //                 get_next.removeClass("active next prev").addClass("active");
-    //                 get_next.find(".slide__item__title").addClass("fadeInUp");
-    //             }, 300);
-    //             get_current_dot.removeClass("active");
-    //             get_dot_next.addClass("active");
-    //
-    //         }
-    //     });
-    // }
-
     function navigateTo(){
         isMoving = true;
         setTimeout(function() {
             isMoving=false;
         },2000);
     }
+
+    // ====================
+
 
 
 
@@ -278,9 +241,84 @@ $(function () {
     // ====================
     // setting slider mobile
     // ====================
-    $(".slick-sp img").width($(window).width());
+
+    if($(window).width() < 801) {
+
+
+        var isMovingSp = false;
+        $("body").on("swipeleft", function (event) {
+            var getCurrentPage = $(".content__wrap .content__item.active");
+            var getNextPage = getCurrentPage.next();
+            var getPrevPage = getCurrentPage.prev();
+
+
+            event.preventDefault();
+            if (isMoving) return;
+            navigateTo();
+            if(!getCurrentPage.is(":last-child")) {
+                getCurrentPage.removeClass("active");
+                getNextPage.addClass("active");
+            }
+        });
+
+        $("body").on("swiperight", function (event) {
+            var getCurrentPage = $(".content__wrap .content__item.active");
+            var getNextPage = getCurrentPage.next();
+            var getPrevPage = getCurrentPage.prev();
+
+
+            event.preventDefault();
+            if (isMoving) return;
+            navigateTo();
+            if(!getCurrentPage.is(":first-child")) {
+                getCurrentPage.removeClass("active");
+                getPrevPage.addClass("active");
+            }
+        });
+
+        function navigateToSp(){
+            isMovingSp = true;
+            setTimeout(function() {
+                isMovingSp=false;
+            },3000);
+        }
+
+
+        // $("body").bind("touchend", function (e) {
+        //     var te = e.originalEvent.changedTouches[0].clientY;
+        //
+        //     var getCurrentPage = $(".content__wrap .content__item.active");
+        //     var getNextPage = getCurrentPage.next();
+        //     var getPrevPage = getCurrentPage.prev();
+        //
+        //
+        //     console.log(ts);
+        //     console.log(te - 150);
+        //     if(ts < (te - 150)) {
+        //         console.log("slide right");
+        //
+        //         if(!getCurrentPage.is(":first-child")) {
+        //             getCurrentPage.removeClass("active");
+        //             getPrevPage.addClass("active");
+        //         }
+        //
+        //
+        //     } else {
+        //         console.log("slide left");
+        //
+        //         if(!getCurrentPage.is(":last-child")) {
+        //             getCurrentPage.removeClass("active");
+        //             getNextPage.addClass("active");
+        //         } else {
+        //         }
+        //
+        //     }
+        //
+        // })
+    }
 
     // $(".slick-sp").slick();
+
 
 
 });

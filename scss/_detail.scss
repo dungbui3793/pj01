@@ -187,9 +187,8 @@ $hear-me: #60c4db;
     @include css3-prefix(transform, translateY(100%));
     display: none;
     @media #{$info-tablet} {
-      @include css3-prefix(transform, translateY(0));
+      @include css3-prefix(transform, translate(0, 0));
     }
-
     &.active {
       display: block;
       .item__info {
@@ -1100,4 +1099,9 @@ $hear-me: #60c4db;
     -ms-transform: translateY(0);
     transform: translateY(0);
   }
+}
+
+.ui-loader {
+  display: none;
+
 }
