@@ -2,6 +2,17 @@ html, body {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  @media #{$info-tablet} {
+    overflow: auto;
+  }
+}
+
+body,
+html {
+  position: fixed;
+  @media #{$info-tablet} {
+    position: relative;
+  }
 }
 
 body {
@@ -36,6 +47,11 @@ $hear-me: #60c4db;
   display: none;
   &.active-loader {
     display: block;
+    @media #{$info-tablet} {
+      display: none;
+      overflow: auto;
+
+    }
   }
   &.active {
     .loader-front {
@@ -125,6 +141,10 @@ $hear-me: #60c4db;
   position: relative;
   @include css3-prefix(transform, translateY(100%));
   overflow: hidden;
+  @media #{$info-tablet} {
+    @include css3-prefix(transform, translateY(0));
+    height: initial;
+  }
   &.move-down {
     -webkit-animation-name: load-slide-down;
     animation-name: load-slide-down;
@@ -166,6 +186,9 @@ $hear-me: #60c4db;
   .content__item {
     @include css3-prefix(transform, translateY(100%));
     display: none;
+    @media #{$info-tablet} {
+      @include css3-prefix(transform, translateY(0));
+    }
 
     &.active {
       display: block;
@@ -175,30 +198,45 @@ $hear-me: #60c4db;
           animation-name: fadeInUpA;
           animation-delay: 4s;
           @include animation_setting;
+          @media #{$info-tablet} {
+            animation-delay: 0s;
+          }
         }
         h3 {
           -webkit-animation-name: fadeInUpA;
           animation-name: fadeInUpA;
           animation-delay: 4.3s;
           @include animation_setting;
+          @media #{$info-tablet} {
+            animation-delay: 0s;
+          }
         }
         .item__text-01 {
           -webkit-animation-name: fadeInUpA;
           animation-name: fadeInUpA;
           animation-delay: 4.6s;
           @include animation_setting;
+          @media #{$info-tablet} {
+            animation-delay: 0s;
+          }
         }
         .item__text-02 {
           -webkit-animation-name: fadeInUpA;
           animation-name: fadeInUpA;
           animation-delay: 4.9s;
           @include animation_setting;
+          @media #{$info-tablet} {
+            animation-delay: 0s;
+          }
         }
         > a {
           -webkit-animation-name: fadeInUpA;
           animation-name: fadeInUpA;
           animation-delay: 5.2s;
           @include animation_setting;
+          @media #{$info-tablet} {
+            animation-delay: 0s;
+          }
         }
       }
 
@@ -211,6 +249,15 @@ $hear-me: #60c4db;
     @include css3-prefix(transform, translateY(20px));
     opacity: 0;
     transition: 1s;
+    @media #{$info-tablet} {
+      @include css3-prefix(transform, translateY(0));
+      opacity: 1;
+    }
+    .nav-right {
+      @media #{$info-phone} {
+        display: none;
+      }
+    }
   }
 }
 
@@ -218,6 +265,113 @@ $hear-me: #60c4db;
   height: 100%;
   .content__item {
     height: 100%;
+
+    // =============== slider sp ==============
+    &.detail-hear-me {
+      .slick-sp .slick-sp-bg {
+        background-size: 140% auto;
+        background-position: center center;
+        @media #{$info-phone} {
+          background-size: 125% auto;
+        }
+      }
+    }
+    &.detail-ar-phabet {
+      .slick-sp .slick-sp-bg {
+        background-size: 105% auto;
+        background-position: 90% 87%;
+        @media #{$info-phone} {
+          background-size: cover;
+        }
+      }
+    }
+    &.detail-parkour {
+      .slick-sp .slick-sp-bg {
+        background-size: cover;
+        background-position: center center;
+      }
+    }
+    &.detail-enjoin {
+      .slick-sp .slick-sp-bg {
+        background-size: 115% auto;
+        background-position: center center;
+      }
+    }
+    .slick-sp {
+      height: 480px;
+      width: 100%;
+      @media #{$info-phone} {
+        height: 280px;
+      }
+      .slick-sp-bg {
+        background-size: 140% auto;
+        background-position: 80% 80%;
+        height: 480px;
+        @media #{$info-phone} {
+          height: 280px;
+          background-size: 160% auto;
+          background-position: 73% 65%;
+        }
+      }
+    }
+    .mobile-setting {
+      -webkit-animation-name: fadeInUpA;
+      animation-name: fadeInUpA;
+      animation-delay: 0s;
+      @include animation_setting;
+      .slide__item__title {
+        background: url("../img/slide-title-line.png") bottom left no-repeat;
+        margin-bottom: 40px;
+        &:first-child {
+          @media #{$info-tablet} {
+            margin-top: 40px;
+          }
+        }
+        @media #{$info-phone} {
+          margin-bottom: 30px;
+        }
+        .item__title-01 {
+          display: inline-block;
+          vertical-align: top;
+          margin-top: 16px;
+          font-family: $font-frutiger-light;
+          font-size: 22px;
+          color: #ff0c00;
+          margin-right: 20px;
+          @media #{$info-phone} {
+            font-size: 18px;
+            margin-right: 13px;
+          }
+        }
+        .item__title-02 {
+          display: inline-block;
+          vertical-align: top;
+          font-family: $font-frutiger-light;
+          font-size: 88px;
+          color: #ff0c00;
+          margin-top: -30px;
+          margin-right: 9px;
+          margin-bottom: -10px;
+          @media #{$info-phone} {
+            font-size: 60px;
+            margin-top: -17px;
+          }
+        }
+        .item__title-03 {
+          display: inline-block;
+          font-family: $font-noto-medium;
+          line-height: 1.6;
+          width: calc(100% - 141px) !important;
+          @media #{$info-phone} {
+            font-size: 13px;
+            width: calc(100% - 110px) !important;
+            padding-bottom: 10px;
+          }
+        }
+      }
+    }
+
+
     .col-left {
       height: 100%;
       width: 50%;
@@ -226,6 +380,10 @@ $hear-me: #60c4db;
       background-repeat: no-repeat;
       position: relative;
       background-color: #daddea;
+      @media #{$info-tablet} {
+        width: 100%;
+        float: none;
+      }
     }
     .col-right {
       height: 100%;
@@ -238,6 +396,9 @@ $hear-me: #60c4db;
       position: relative;
       background-color: #000;
       overflow: hidden;
+      @media #{$info-tablet} {
+        display: none;
+      }
       .slide__item {
         top: -40px;
         bottom: -40px;
@@ -325,6 +486,9 @@ $hear-me: #60c4db;
       text-align: right;
       padding: 0;
       margin-right: 18px;
+      @media #{$info-tablet} {
+        display: none;
+      }
       > li {
         position: relative;
         padding-right: 20px;
@@ -482,6 +646,14 @@ $hear-me: #60c4db;
       width: 360px;
       margin-left: 9.6%;
       font-family: $font-noto-regular;
+      @media #{$info-tablet} {
+        width: 100%;
+        margin-left: 0;
+        padding: 32px 30px 0;
+      }
+      @media #{$info-phone} {
+        padding: 32px 15px 0;
+      }
       h1 {
         font-family: $font-frutiger-light;
         font-size: 90px;
@@ -493,6 +665,10 @@ $hear-me: #60c4db;
         margin-right: -150px;
         span {
           color: $link-world;
+        }
+        @media #{$info-phone} {
+          font-size: 57px;
+          line-height: 0.98;
         }
       }
       h3 {
@@ -508,6 +684,9 @@ $hear-me: #60c4db;
           color: #5d5e61;
           margin: 5px 0 12px;
         }
+        @media #{$info-phone} {
+          font-size: 16px;
+        }
       }
       .item__text-01 {
         font-size: 18px;
@@ -516,6 +695,9 @@ $hear-me: #60c4db;
         @include css3-prefix(transform, translateY(20px));
         transition: 1s;
         opacity: 0;
+        @media #{$info-phone} {
+          line-height: 1.6;
+        }
       }
       .item__text-02 {
         font-size: 14px;
@@ -523,6 +705,9 @@ $hear-me: #60c4db;
         @include css3-prefix(transform, translateY(20px));
         transition: 1s;
         opacity: 0;
+        @media #{$info-phone} {
+          font-size: 13px;
+        }
       }
       > a {
         @include css3-prefix(transform, translateY(20px));
@@ -535,6 +720,13 @@ $hear-me: #60c4db;
     &.detail-link-world {
       .col-left {
         background: url("../img/detail-link-bg-left.png") no-repeat -15px calc(100% + 15px) #daddea;
+        @media #{$info-tablet} {
+          background: url("../img/sp-detail-link-bg-left.png") no-repeat calc(100% + 10px) 40px #daddea;
+        }
+        @media #{$info-phone} {
+          background-size: 38%;
+          background-position: calc(100% + 4px) 24px;
+        }
       }
       .slide__item__title {
         &.slide__item__title-01 {
@@ -583,6 +775,13 @@ $hear-me: #60c4db;
       }
       .col-left {
         background: url("../img/detail-hear-bg-left.png") no-repeat left calc(100% - 90px) #daddea;
+        @media #{$info-tablet} {
+          background: url("../img/sp-detail-hear-bg-left.png") no-repeat calc(100% + 10px) 40px #daddea;
+        }
+        @media #{$info-phone} {
+          background-size: 54%;
+          background-position: calc(100% + 4px) 24px;
+        }
       }
       .slide__item__title {
         &.slide__item__title-01 {
@@ -623,6 +822,13 @@ $hear-me: #60c4db;
       }
       .col-left {
         background: url("../img/detail-ar-bg-left.png") no-repeat -36px calc(100% + 54px) #daddea;
+        @media #{$info-tablet} {
+          background-size: 38%;
+          background-position: calc(100% + 100px) -32px;
+        }
+        @media #{$info-phone} {
+          background-position: calc(100% + 47px) -12px;
+        }
       }
       .slide__item__title {
         &.slide__item__title-01 {
@@ -668,12 +874,22 @@ $hear-me: #60c4db;
       }
       .col-left {
         background: url("../img/detail-park-bg-left.png") no-repeat -75px calc(100% + 75px) #daddea;
+        @media #{$info-tablet} {
+          background-position: calc(100% + 85px) -85px;
+        }
+        @media #{$info-phone} {
+          background-size: 48%;
+          background-position: calc(100% + 54px) -54px;
+        }
       }
       .slide__item__title {
         &.slide__item__title-01 {
           bottom: 120px;
           top: initial;
           color: #fff;
+          @media #{$info-tablet} {
+            color: #333;
+          }
           &:before {
             display: none;
           }
@@ -692,6 +908,9 @@ $hear-me: #60c4db;
           top: initial;
           bottom: 120px;
           color: #fff;
+          @media #{$info-tablet} {
+            color: #333;
+          }
 
           &:before {
             display: none;
@@ -726,6 +945,13 @@ $hear-me: #60c4db;
       }
       .col-left {
         background: url("../img/detail-enjoin-bg-left.png") no-repeat -53px calc(100% - 65px) #daddea;
+        @media #{$info-tablet} {
+          background: url("../img/sp-detail-enjoin-bg-left.png") no-repeat calc(100% + 50px) -20px #daddea;
+        }
+        @media #{$info-phone} {
+          background-size: 54%;
+          background-position: calc(100% + 30px) -10px;
+        }
       }
       .slide__item__title {
         &.slide__item__title-01 {
