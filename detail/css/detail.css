@@ -354,6 +354,11 @@ h1, h2, h3, p {
             height: 280px;
             background-size: 160% auto;
             background-position: 73% 65%; } }
+    .content__wrap .content__item .visible-tablet {
+      display: none; }
+      @media only screen and (max-width: 800px) {
+        .content__wrap .content__item .visible-tablet {
+          display: block; } }
     .content__wrap .content__item .mobile-setting {
       -webkit-animation-name: fadeInUpA;
       animation-name: fadeInUpA;
@@ -364,11 +369,6 @@ h1, h2, h3, p {
       animation-duration: 1.2s;
       -webkit-animation-fill-mode: both;
       animation-fill-mode: both; }
-      .content__wrap .content__item .mobile-setting.visible-tablet {
-        display: none; }
-        @media only screen and (max-width: 800px) {
-          .content__wrap .content__item .mobile-setting.visible-tablet {
-            display: block; } }
       .content__wrap .content__item .mobile-setting .slide__item__title {
         background: url("../img/slide-title-line.png") bottom left no-repeat;
         margin-bottom: 40px; }
@@ -728,6 +728,7 @@ h1, h2, h3, p {
           .content__wrap .content__item .item__info .item__text-02 {
             font-size: 13px; } }
       .content__wrap .content__item .item__info > a {
+        outline: none;
         -webkit-transform: translateY(20px);
         -khtml-transform: translateY(20px);
         -moz-transform: translateY(20px);
@@ -736,6 +737,9 @@ h1, h2, h3, p {
         transform: translateY(20px);
         transition: 1s;
         opacity: 0; }
+        @media only screen and (max-width: 800px) {
+          .content__wrap .content__item .item__info > a.hear-me-popup {
+            display: none; } }
     .content__wrap .content__item.detail-link-world .col-left {
       background: url("../img/detail-link-bg-left.png") no-repeat -15px calc(100% + 15px) #daddea; }
       @media only screen and (max-width: 800px) {
@@ -1055,5 +1059,23 @@ h1, h2, h3, p {
     transform: translateY(0); } }
 .ui-loader {
   display: none; }
+
+.popup-hear-me {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  display: none; }
+  .popup-hear-me > div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.85); }
+  .popup-hear-me iframe {
+    border: none; }
 
 /*# sourceMappingURL=detail.css.map */

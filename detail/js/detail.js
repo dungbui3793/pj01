@@ -23,6 +23,17 @@ $(function () {
     }
 
 
+    $(".hear-me-popup").click(function () {
+        $(".popup-hear-me").fadeIn(300);
+    });
+    $(document).mouseup(function(e) {
+        var $container = $(".popup-hear-me iframe");
+
+        // if the target of the click isn't the container nor a descendant of the container
+        if (!$container.is(e.target) && $container.has(e.target).length === 0) {
+            $(".popup-hear-me").fadeOut();
+        }
+    });
 
     // ====================
     // setting scroll single slide right
