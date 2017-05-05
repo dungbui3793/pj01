@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9353332e-1e3d-4955-a1c2-050e9c362766" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/detail/css/detail.css" afterPath="$PROJECT_DIR$/detail/css/detail.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/detail/css/detail.css.map" afterPath="$PROJECT_DIR$/detail/css/detail.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/detail/index.html" afterPath="$PROJECT_DIR$/detail/index.html" />
@@ -22,10 +21,9 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/detail/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="39" lean-forward="false" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
+            <state relative-caret-position="539">
+              <caret line="45" column="46" lean-forward="false" selection-start-line="45" selection-start-column="46" selection-end-line="45" selection-end-column="46" />
               <folding>
-                <element signature="n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -60,35 +58,36 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="detail.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="detail.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/detail/js/detail.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="246" column="0" lean-forward="false" selection-start-line="246" selection-start-column="0" selection-end-line="246" selection-end-column="0" />
+            <state relative-caret-position="620">
+              <caret line="242" column="32" lean-forward="false" selection-start-line="242" selection-start-column="32" selection-end-line="242" selection-end-column="32" />
               <folding>
                 <element signature="e#839#3047#0" expanded="false" />
                 <element signature="e#3081#3214#0" expanded="false" />
-                <element signature="e#3477#5417#0" expanded="false" />
-                <element signature="e#5445#5554#0" expanded="false" />
-                <element signature="e#5784#6958#0" expanded="false" />
-                <element signature="e#7050#8291#0" expanded="false" />
+                <element signature="e#3473#5413#0" expanded="false" />
+                <element signature="e#5441#5550#0" expanded="false" />
+                <element signature="e#5779#6953#0" expanded="false" />
+                <element signature="e#7045#8286#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_detail.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_detail.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scss/_detail.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="190" column="0" lean-forward="false" selection-start-line="190" selection-start-column="0" selection-end-line="190" selection-end-column="0" />
+            <state relative-caret-position="329">
+              <caret line="328" column="25" lean-forward="false" selection-start-line="328" selection-start-column="25" selection-end-line="328" selection-end-column="25" />
               <folding>
                 <element signature="e#469#2190#0" expanded="false" />
-                <element signature="e#17190#18322#0" expanded="false" />
-                <element signature="e#18345#19533#0" expanded="false" />
-                <element signature="e#18494#18879#0" expanded="false" />
-                <element signature="e#19558#20784#0" expanded="false" />
-                <element signature="e#20807#22487#0" expanded="false" />
+                <element signature="e#3430#4884#0" expanded="false" />
+                <element signature="e#17550#18682#0" expanded="false" />
+                <element signature="e#18705#19893#0" expanded="false" />
+                <element signature="e#18854#19239#0" expanded="false" />
+                <element signature="e#19918#21144#0" expanded="false" />
+                <element signature="e#21167#22847#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -106,7 +105,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>get_index</find>
       <find>get_current_dot</find>
       <find>slider</find>
       <find>img</find>
@@ -121,7 +119,6 @@
       <find>item__info</find>
       <find>1.9</find>
       <find>item__text-01</find>
-      <find>mobile</find>
       <find>line-height: 1.6;</find>
       <find>margin-bottom: 40px;</find>
       <find>col-le</find>
@@ -136,6 +133,8 @@
       <find>load-slide-up</find>
       <find>slide-right</find>
       <find>load-slide-right</find>
+      <find>visible-xs visible-sm</find>
+      <find>mobile</find>
     </findStrings>
     <replaceStrings>
       <replace>url('</replace>
@@ -171,8 +170,8 @@
         <option value="$PROJECT_DIR$/detail/css/slick-theme.css" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/detail/index.html" />
-        <option value="$PROJECT_DIR$/detail/js/detail.js" />
         <option value="$PROJECT_DIR$/scss/_detail.scss" />
+        <option value="$PROJECT_DIR$/detail/js/detail.js" />
       </list>
     </option>
   </component>
@@ -477,12 +476,12 @@
       <workItem from="1493862201381" duration="23434000" />
       <workItem from="1493948187318" duration="9939000" />
       <workItem from="1493967565227" duration="184000" />
-      <workItem from="1493968663559" duration="4438000" />
+      <workItem from="1493968663559" duration="5384000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="182054000" />
+    <option name="totallyTimeSpent" value="183000000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="977" extended-state="6" />
@@ -821,10 +820,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/detail/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="39" lean-forward="false" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
+        <state relative-caret-position="539">
+          <caret line="45" column="46" lean-forward="false" selection-start-line="45" selection-start-column="46" selection-end-line="45" selection-end-column="46" />
           <folding>
-            <element signature="n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -858,32 +856,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/detail/js/detail.js">
+    <entry file="file://$PROJECT_DIR$/scss/_detail.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="246" column="0" lean-forward="false" selection-start-line="246" selection-start-column="0" selection-end-line="246" selection-end-column="0" />
+        <state relative-caret-position="329">
+          <caret line="328" column="25" lean-forward="false" selection-start-line="328" selection-start-column="25" selection-end-line="328" selection-end-column="25" />
           <folding>
-            <element signature="e#839#3047#0" expanded="false" />
-            <element signature="e#3081#3214#0" expanded="false" />
-            <element signature="e#3477#5417#0" expanded="false" />
-            <element signature="e#5445#5554#0" expanded="false" />
-            <element signature="e#5784#6958#0" expanded="false" />
-            <element signature="e#7050#8291#0" expanded="false" />
+            <element signature="e#469#2190#0" expanded="false" />
+            <element signature="e#3430#4884#0" expanded="false" />
+            <element signature="e#17550#18682#0" expanded="false" />
+            <element signature="e#18705#19893#0" expanded="false" />
+            <element signature="e#18854#19239#0" expanded="false" />
+            <element signature="e#19918#21144#0" expanded="false" />
+            <element signature="e#21167#22847#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scss/_detail.scss">
+    <entry file="file://$PROJECT_DIR$/detail/js/detail.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="190" column="0" lean-forward="false" selection-start-line="190" selection-start-column="0" selection-end-line="190" selection-end-column="0" />
+        <state relative-caret-position="620">
+          <caret line="242" column="32" lean-forward="false" selection-start-line="242" selection-start-column="32" selection-end-line="242" selection-end-column="32" />
           <folding>
-            <element signature="e#469#2190#0" expanded="false" />
-            <element signature="e#17190#18322#0" expanded="false" />
-            <element signature="e#18345#19533#0" expanded="false" />
-            <element signature="e#18494#18879#0" expanded="false" />
-            <element signature="e#19558#20784#0" expanded="false" />
-            <element signature="e#20807#22487#0" expanded="false" />
+            <element signature="e#839#3047#0" expanded="false" />
+            <element signature="e#3081#3214#0" expanded="false" />
+            <element signature="e#3473#5413#0" expanded="false" />
+            <element signature="e#5441#5550#0" expanded="false" />
+            <element signature="e#5779#6953#0" expanded="false" />
+            <element signature="e#7045#8286#0" expanded="false" />
           </folding>
         </state>
       </provider>

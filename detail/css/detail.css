@@ -208,14 +208,6 @@ h1, h2, h3, p {
     -o-transform: translateY(100%);
     transform: translateY(100%);
     display: none; }
-    @media only screen and (max-width: 800px) {
-      .main-content .content__item {
-        -webkit-transform: translate(0, 0);
-        -khtml-transform: translate(0, 0);
-        -moz-transform: translate(0, 0);
-        -ms-transform: translate(0, 0);
-        -o-transform: translate(0, 0);
-        transform: translate(0, 0); } }
     .main-content .content__item.active {
       display: block; }
       .main-content .content__item.active .item__info h1 {
@@ -312,6 +304,23 @@ h1, h2, h3, p {
   height: 100%; }
   .content__wrap .content__item {
     height: 100%; }
+    @media only screen and (max-width: 800px) {
+      .content__wrap .content__item {
+        -webkit-transform: translate(0, 0);
+        -khtml-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+        transform: translate(0, 0);
+        display: block; }
+        .content__wrap .content__item.slick-slide .item__info h1, .content__wrap .content__item.slick-slide .item__info h3, .content__wrap .content__item.slick-slide .item__info .item__text-01, .content__wrap .content__item.slick-slide .item__info .item__text-02, .content__wrap .content__item.slick-slide .item__info > a {
+          opacity: 1;
+          -webkit-transform: translateY(0);
+          -khtml-transform: translateY(0);
+          -moz-transform: translateY(0);
+          -ms-transform: translateY(0);
+          -o-transform: translateY(0);
+          transform: translateY(0); } }
     .content__wrap .content__item.detail-hear-me .slick-sp .slick-sp-bg {
       background-size: 140% auto;
       background-position: center center; }
@@ -355,6 +364,11 @@ h1, h2, h3, p {
       animation-duration: 1.2s;
       -webkit-animation-fill-mode: both;
       animation-fill-mode: both; }
+      .content__wrap .content__item .mobile-setting.visible-tablet {
+        display: none; }
+        @media only screen and (max-width: 800px) {
+          .content__wrap .content__item .mobile-setting.visible-tablet {
+            display: block; } }
       .content__wrap .content__item .mobile-setting .slide__item__title {
         background: url("../img/slide-title-line.png") bottom left no-repeat;
         margin-bottom: 40px; }

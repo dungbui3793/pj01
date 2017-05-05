@@ -94,10 +94,6 @@ $(function () {
     // ====================
 
 
-
-
-
-
     // ====================
     // setting scroll single slide right
     // ====================
@@ -162,7 +158,6 @@ $(function () {
     }
 
     // ====================
-
 
 
 
@@ -244,81 +239,10 @@ $(function () {
 
     if($(window).width() < 801) {
 
-
-        var isMovingSp = false;
-        $("body").on("swipeleft", function (event) {
-            var getCurrentPage = $(".content__wrap .content__item.active");
-            var getNextPage = getCurrentPage.next();
-            var getPrevPage = getCurrentPage.prev();
-
-
-            event.preventDefault();
-            if (isMoving) return;
-            navigateTo();
-            if(!getCurrentPage.is(":last-child")) {
-                getCurrentPage.removeClass("active");
-                getNextPage.addClass("active");
-            }
+        $(".content__wrap").slick({
+            adaptiveHeight: true
         });
-
-        $("body").on("swiperight", function (event) {
-            var getCurrentPage = $(".content__wrap .content__item.active");
-            var getNextPage = getCurrentPage.next();
-            var getPrevPage = getCurrentPage.prev();
-
-
-            event.preventDefault();
-            if (isMoving) return;
-            navigateTo();
-            if(!getCurrentPage.is(":first-child")) {
-                getCurrentPage.removeClass("active");
-                getPrevPage.addClass("active");
-            }
-        });
-
-        function navigateToSp(){
-            isMovingSp = true;
-            setTimeout(function() {
-                isMovingSp=false;
-            },3000);
-        }
-
-
-        // $("body").bind("touchend", function (e) {
-        //     var te = e.originalEvent.changedTouches[0].clientY;
-        //
-        //     var getCurrentPage = $(".content__wrap .content__item.active");
-        //     var getNextPage = getCurrentPage.next();
-        //     var getPrevPage = getCurrentPage.prev();
-        //
-        //
-        //     console.log(ts);
-        //     console.log(te - 150);
-        //     if(ts < (te - 150)) {
-        //         console.log("slide right");
-        //
-        //         if(!getCurrentPage.is(":first-child")) {
-        //             getCurrentPage.removeClass("active");
-        //             getPrevPage.addClass("active");
-        //         }
-        //
-        //
-        //     } else {
-        //         console.log("slide left");
-        //
-        //         if(!getCurrentPage.is(":last-child")) {
-        //             getCurrentPage.removeClass("active");
-        //             getNextPage.addClass("active");
-        //         } else {
-        //         }
-        //
-        //     }
-        //
-        // })
     }
-
-    // $(".slick-sp").slick();
-
 
 
 });
@@ -326,4 +250,4 @@ $(function () {
 function is_touch_device() {
     return 'ontouchstart' in window        // works on most browsers
             || navigator.maxTouchPoints;       // works on IE10/11 and Surface
-};
+}

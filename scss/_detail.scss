@@ -186,9 +186,6 @@ $hear-me: #60c4db;
   .content__item {
     @include css3-prefix(transform, translateY(100%));
     display: none;
-    @media #{$info-tablet} {
-      @include css3-prefix(transform, translate(0, 0));
-    }
     &.active {
       display: block;
       .item__info {
@@ -266,6 +263,18 @@ $hear-me: #60c4db;
     height: 100%;
 
     // =============== slider sp ==============
+    @media #{$info-tablet} {
+      @include css3-prefix(transform, translate(0, 0));
+      display: block;
+      &.slick-slide {
+        .item__info {
+          h1, h3, .item__text-01, .item__text-02, > a {
+            opacity: 1;
+            @include css3-prefix(transform, translateY(0))
+          }
+        }
+      }
+    }
     &.detail-hear-me {
       .slick-sp .slick-sp-bg {
         background-size: 140% auto;
@@ -314,6 +323,12 @@ $hear-me: #60c4db;
       }
     }
     .mobile-setting {
+      &.visible-tablet {
+        display: none;
+        @media #{$info-tablet} {
+          display: block;
+        }
+      }
       -webkit-animation-name: fadeInUpA;
       animation-name: fadeInUpA;
       animation-delay: 0s;
