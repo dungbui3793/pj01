@@ -3,6 +3,12 @@
  */
 
 $(function () {
+    var pathname = window.location.pathname; // Returns path only
+    var url      = window.location.href;     // Returns full URL
+    var local = window.location.origin;
+
+    var getLinkPage = url.replace(local + pathname + '#', "");
+
     if($(window).width() > 800) {
         var wow = new WOW({});
         wow.init();
@@ -14,12 +20,42 @@ $(function () {
         setTimeout(function () {
             $(".main-content").addClass("active");
         }, 4000);
-        setTimeout(function () {
-            $(".content__wrap .content__item:first-child").addClass("active");
-        }, 2000);
+
+        if(getLinkPage != url) {
+            setTimeout(function () {
+                $(".content__wrap .content__item.detail-"+getLinkPage).addClass("active");
+            }, 2000);
+            $(".loader-content .loader-wrap."+getLinkPage).addClass("active-loader");
+
+        } else {
+            setTimeout(function () {
+                $(".content__wrap .content__item:first-child").addClass("active");
+            }, 2000);
+            $(".loader-content .loader-wrap:first-child").addClass("active-loader");
+        }
 
     } else {
-        $(".content__wrap .content__item:first-child").addClass("active");
+        // ====================
+        // setting slider mobile
+        // ====================
+
+        if(getLinkPage != url) {
+            var getIndexLink = $(".content__wrap .content__item").index($(".content__wrap .content__item.detail-"+getLinkPage));
+
+            $(".content__wrap").slick({
+                adaptiveHeight: true,
+                initialSlide: parseInt(getIndexLink)
+            });
+
+        } else {
+            $(".content__wrap").slick({
+                adaptiveHeight: true
+            });
+        }
+
+        $('.content__wrap').on('afterChange', function (slickSlide,i) {
+           console.log($(".content__wrap .content__item.slick-active").attr("class"));
+        });
     }
 
 
@@ -54,24 +90,34 @@ $(function () {
 
             var scrollPosition = event.originalEvent.wheelDelta;
             if(scrollPosition > 0) {
+                if (isMoving_2) return;
+                navigateTo_2();
+                settingNextScrollPage();
+                console.log("up");
+
                 if(!get_current_page.is(":first-child")) {
-                    if (isMoving_2) return;
-                    navigateTo_2();
-                    console.log("up");
-                    settingNextScrollPage();
                     getCurrentLoader.removeClass("active-loader");
                     getPrevLoader.addClass("active-loader");
                     setTimeout(function () {
                         get_current_page.removeClass("active");
                         get_prev_page.addClass("active");
                     },2000);
+                } else {
+                    getCurrentLoader.removeClass("active-loader");
+                    $(".loader-content .loader-wrap:last-child").addClass("active-loader");
+                    setTimeout(function () {
+                        get_current_page.removeClass("active");
+                        $(".content__wrap .content__item:last-child").addClass("active");
+                    },2000);
                 }
             } else {
+                if (isMoving_2) return;
+                navigateTo_2();
+                console.log("down");
+                settingNextScrollPage();
+
                 if(!get_current_page.is(":last-child")) {
-                    if (isMoving_2) return;
-                    navigateTo_2();
-                    console.log("down");
-                    settingNextScrollPage();
+
                     getCurrentLoader.removeClass("active-loader");
                     getNextLoader.addClass("active-loader");
 
@@ -79,20 +125,14 @@ $(function () {
                         get_current_page.removeClass("active");
                         get_next_page.addClass("active");
                     },2000);
+                } else {
+                    getCurrentLoader.removeClass("active-loader");
+                    $(".loader-content .loader-wrap:first-child").addClass("active-loader");
+                    setTimeout(function () {
+                        get_current_page.removeClass("active");
+                        $(".content__wrap .content__item:first-child").addClass("active");
+                    },2000);
                 }
-            }
-            function settingNextScrollPage() {
-                $(".loader-wrap").removeClass("active").addClass("next-active");
-
-                $(".main-content").removeClass("active").addClass("move-down");
-
-                setTimeout(function () {
-                    $(".loader-wrap").addClass("active");
-                },500);
-
-                setTimeout(function () {
-                    $(".main-content").addClass("active").removeClass("move-down");
-                }, 4000);
             }
         });
         function navigateTo_2(){
@@ -114,6 +154,7 @@ $(function () {
     $('.slide-right').bind("mousewheel DOMMouseScroll MozMousePixelScroll", function(event, delta) {
         event.preventDefault();
 
+        // get detail slide
         var get_this_slide = $(this);
         var get_this_current_slide = get_this_slide.find(".slide__item.active");
         var get_next = get_this_current_slide.next();
@@ -124,6 +165,16 @@ $(function () {
         var get_dot_next = get_current_dot.next();
         var get_dot_prev = get_current_dot.prev();
 
+
+
+        // get detail page
+        var get_current_page = $(".content__wrap .content__item.active");
+        var get_next_page = get_current_page.next();
+        var get_prev_page = get_current_page.prev();
+
+        var getCurrentLoader = $(".loader-content .loader-wrap.active-loader");
+        var getNextLoader = getCurrentLoader.next();
+        var getPrevLoader = getCurrentLoader.prev();
 
         var scrollPosition = event.originalEvent.wheelDelta;
 
@@ -141,6 +192,31 @@ $(function () {
                 }, 300);
                 get_current_dot.removeClass("active");
                 get_dot_prev.addClass("active");
+            } else {
+                // if first slide right, move to prev page
+                if (isMoving) return;
+                navigateTo();
+                console.log("first");
+                settingNextScrollPage();
+                if(!get_current_page.is(":first-child")) {
+                    console.log("up");
+                    getCurrentLoader.removeClass("active-loader");
+                    getPrevLoader.addClass("active-loader");
+                    setTimeout(function () {
+                        get_current_page.removeClass("active");
+                        get_prev_page.addClass("active");
+                    },2000);
+                } else {
+                    // if current page is first page, move to last page
+                    getCurrentLoader.removeClass("active-loader");
+                    $(".loader-content .loader-wrap:last-child").addClass("active-loader");
+
+                    setTimeout(function () {
+                        get_current_page.removeClass("active");
+                        $(".content__wrap .content__item:last-child").addClass("active");
+                    }, 2000);
+                }
+
             }
         } else {
             if (!get_this_current_slide.is(':last-child')) {
@@ -156,6 +232,37 @@ $(function () {
                 }, 300);
                 get_current_dot.removeClass("active");
                 get_dot_next.addClass("active");
+                console.log("down");
+            } else {
+                // if last slide right, move to next page
+
+                if (isMoving) return;
+                navigateTo();
+                console.log("last");
+                settingNextScrollPage();
+
+                if(!get_current_page.is(":last-child")) {
+                    console.log("down");
+                    getCurrentLoader.removeClass("active-loader");
+                    getNextLoader.addClass("active-loader");
+
+                    setTimeout(function () {
+                        get_current_page.removeClass("active");
+                        get_next_page.addClass("active");
+                    },2000);
+                } else {
+                    // if current page is last, move to first page
+                    getCurrentLoader.removeClass("active-loader");
+                    $(".loader-content .loader-wrap:first-child").addClass("active-loader");
+
+                    setTimeout(function () {
+                        get_current_page.removeClass("active");
+                        $(".content__wrap .content__item:first-child").addClass("active");
+                    }, 2000);
+
+                }
+
+
             }
         }
 
@@ -244,21 +351,24 @@ $(function () {
     // ====================
 
 
-    // ====================
-    // setting slider mobile
-    // ====================
-
-    if($(window).width() < 801) {
-
-        $(".content__wrap").slick({
-            adaptiveHeight: true
-        });
-    }
-
 
 });
 
 function is_touch_device() {
     return 'ontouchstart' in window        // works on most browsers
             || navigator.maxTouchPoints;       // works on IE10/11 and Surface
+}
+
+function settingNextScrollPage() {
+    $(".loader-wrap").removeClass("active").addClass("next-active");
+
+    $(".main-content").removeClass("active").addClass("move-down");
+
+    setTimeout(function () {
+        $(".loader-wrap").addClass("active");
+    },500);
+
+    setTimeout(function () {
+        $(".main-content").addClass("active").removeClass("move-down");
+    }, 4000);
 }

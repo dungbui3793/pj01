@@ -84,6 +84,9 @@
     display: inline-block;
     margin: 20px 0 0;
     font-family: "FrutigerNextLT-Light"; }
+    .nav-bar h1 a {
+      color: #333;
+      text-decoration: none; }
     @media only screen and (max-width: 767px) {
       .nav-bar h1 {
         display: block;
