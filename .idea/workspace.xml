@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9353332e-1e3d-4955-a1c2-050e9c362766" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/css/common.css" afterPath="$PROJECT_DIR$/common/css/common.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/css/common.css.map" afterPath="$PROJECT_DIR$/common/css/common.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/css/common.scss" afterPath="$PROJECT_DIR$/common/css/common.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/detail/index.html" afterPath="$PROJECT_DIR$/detail/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/detail/js/detail.js" afterPath="$PROJECT_DIR$/detail/js/detail.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/detail/css/detail.css" afterPath="$PROJECT_DIR$/detail/css/detail.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/detail/css/detail.css.map" afterPath="$PROJECT_DIR$/detail/css/detail.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/_detail.scss" afterPath="$PROJECT_DIR$/scss/_detail.scss" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -55,7 +51,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="detail.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="detail.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/detail/js/detail.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="677">
@@ -70,12 +66,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="common.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/css/common.scss">
+      <file leaf-file-name="_detail.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scss/_detail.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="105" column="27" lean-forward="false" selection-start-line="105" selection-start-column="27" selection-end-line="105" selection-end-column="27" />
-              <folding />
+            <state relative-caret-position="1460">
+              <caret line="561" column="40" lean-forward="true" selection-start-line="561" selection-start-column="40" selection-end-line="561" selection-end-column="40" />
+              <folding>
+                <element signature="e#3430#4884#0" expanded="false" />
+                <element signature="e#17584#18716#0" expanded="false" />
+                <element signature="e#18739#19927#0" expanded="false" />
+                <element signature="e#18888#19273#0" expanded="false" />
+                <element signature="e#19952#21178#0" expanded="false" />
+                <element signature="e#21201#22881#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -102,7 +105,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>item__info</find>
       <find>1.9</find>
       <find>item__text-01</find>
       <find>line-height: 1.6;</find>
@@ -132,6 +134,7 @@
       <find>h1</find>
       <find>get_current_page</find>
       <find>settingNextScrollPage</find>
+      <find>ar-pha</find>
     </findStrings>
     <replaceStrings>
       <replace>url('</replace>
@@ -165,11 +168,11 @@
         <option value="$PROJECT_DIR$/detail/css/detail.scss" />
         <option value="$PROJECT_DIR$/detail/css/slick-theme.css" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/scss/_detail.scss" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/detail/index.html" />
         <option value="$PROJECT_DIR$/common/css/common.scss" />
         <option value="$PROJECT_DIR$/detail/js/detail.js" />
+        <option value="$PROJECT_DIR$/scss/_detail.scss" />
       </list>
     </option>
   </component>
@@ -275,7 +278,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -295,10 +298,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="css" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="detail.scss" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NestingTreeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -345,18 +344,18 @@
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/common/css" />
+      <recent name="$PROJECT_DIR$/common/js" />
+      <recent name="$PROJECT_DIR$/common/img" />
+      <recent name="$PROJECT_DIR$/scss" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/detail/img" />
       <recent name="$PROJECT_DIR$/detail/css" />
       <recent name="$PROJECT_DIR$/detail/js" />
       <recent name="$PROJECT_DIR$/font" />
       <recent name="$PROJECT_DIR$/common/css" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/common/css" />
-      <recent name="$PROJECT_DIR$/common/js" />
-      <recent name="$PROJECT_DIR$/common/img" />
-      <recent name="$PROJECT_DIR$/scss" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -475,12 +474,12 @@
       <workItem from="1493948187318" duration="9939000" />
       <workItem from="1493967565227" duration="184000" />
       <workItem from="1493968663559" duration="7028000" />
-      <workItem from="1494204183021" duration="7502000" />
+      <workItem from="1494204183021" duration="9875000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="192146000" />
+    <option name="totallyTimeSpent" value="194519000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="977" extended-state="6" />
@@ -835,21 +834,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scss/_detail.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="160" column="10" lean-forward="false" selection-start-line="160" selection-start-column="8" selection-end-line="160" selection-end-column="10" />
-          <folding>
-            <element signature="e#3430#4884#0" expanded="false" />
-            <element signature="e#17670#18802#0" expanded="false" />
-            <element signature="e#18825#20013#0" expanded="false" />
-            <element signature="e#18974#19359#0" expanded="false" />
-            <element signature="e#20038#21264#0" expanded="false" />
-            <element signature="e#21287#22967#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -875,6 +859,21 @@
             <element signature="e#10185#10294#0" expanded="false" />
             <element signature="e#10523#11697#0" expanded="false" />
             <element signature="e#11789#13030#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/_detail.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1460">
+          <caret line="561" column="40" lean-forward="true" selection-start-line="561" selection-start-column="40" selection-end-line="561" selection-end-column="40" />
+          <folding>
+            <element signature="e#3430#4884#0" expanded="false" />
+            <element signature="e#17584#18716#0" expanded="false" />
+            <element signature="e#18739#19927#0" expanded="false" />
+            <element signature="e#18888#19273#0" expanded="false" />
+            <element signature="e#19952#21178#0" expanded="false" />
+            <element signature="e#21201#22881#0" expanded="false" />
           </folding>
         </state>
       </provider>
